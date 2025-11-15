@@ -1,38 +1,22 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
-</script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-5NCPKJRMTR">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5NCPKJRMTR');
-</script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO & Meta Tags -->
     <title>Bull shark tours</title>
     <meta name="description" content="Vive la experiencia de bucear con el tiburón toro en Playa del Carmen. Tours seguros, guiados por expertos en vida marina. Reserva tu aventura hoy.">
     <meta name="keywords" content="tiburón toro, Playa del Carmen, buceo, tours de buceo, aventura marina, bull shark dive, riviera maya diving, 2025, 2026">
     <meta name="author" content="Bull Shark Playa Ecotours (Lydia Dive Instructor)">
 
-    <!-- Fonts: Inter (Modern Sans Serif) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Icons (FontAwesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Tailwind Configuration for Custom Colors -->
     <script>
         tailwind.config = {
             theme: {
@@ -127,39 +111,32 @@
 </head>
 <body class="font-sans text-slate-700 bg-white antialiased">
 
-    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <i class="fa-solid fa-water text-oceanBlue text-2xl"></i>
                     <span class="font-bold text-xl tracking-tight text-deepBlue">BULL SHARK <span class="font-light">PLAYA</span></span>
                 </div>
 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#experience" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_tour">El Tour</a>
                     <a href="#details" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_details">Detalles</a>
                     <a href="#gallery" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_gallery">Galería</a>
                     <a href="#about" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_about">Nosotros</a>
-                    <!-- NUEVO Enlace a Tips -->
                     <a href="#tips" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_tips">Tips</a>
                     <a href="#more-tours" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_more">Más Tours (PRÓXIMAMENTE)</a>
                     
-                    <!-- Language Switcher -->
                     <button onclick="toggleLanguage()" class="flex items-center gap-2 border border-slate-300 px-3 py-1 rounded-full hover:bg-slate-100 transition">
                         <i class="fa-solid fa-globe text-slate-500"></i>
                         <span id="lang-display" class="text-sm font-semibold">ES</span>
                     </button>
 
-                    <!-- CTA Button -->
                     <a href="#book" class="bg-oceanBlue hover:bg-deepBlue text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-blue-500/30" data-i18n="nav_book">
                         Reservar Ahora
                     </a>
                 </div>
 
-                <!-- Mobile Menu Button -->
                 <div class="md:hidden flex items-center gap-4">
                     <button onclick="toggleLanguage()" class="text-slate-600 font-bold">
                         <span id="lang-display-mobile">ES</span>
@@ -171,14 +148,12 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Panel -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
                 <a href="#experience" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_tour">El Tour</a>
                 <a href="#details" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_details">Detalles</a>
                 <a href="#gallery" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_gallery">Galería</a>
                 <a href="#about" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_about">Nosotros</a>
-                <!-- NUEVO Enlace a Tips (Móvil) -->
                 <a href="#tips" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_tips">Tips</a>
                 <a href="#more-tours" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_more">Más Tours (PRÓXIMAMENTE)</a>
                 <a href="#book" class="block mt-4 text-center bg-oceanBlue text-white px-3 py-3 rounded-lg font-bold" onclick="toggleMobileMenu()" data-i18n="nav_book">Reservar Ahora</a>
@@ -186,7 +161,6 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero-bg h-screen flex items-center justify-center relative">
         <div class="text-center px-4 max-w-4xl mx-auto">
             <span class="text-accent font-bold tracking-wider uppercase text-sm mb-4 block" data-i18n="hero_subtitle">Temporada 2025 - 2026, Playa del Carmen</span>
@@ -200,7 +174,6 @@
                 <a href="#book" class="bg-white text-deepBlue hover:bg-slate-100 px-8 py-4 rounded-full font-bold transition text-lg" data-i18n="cta_primary">
                     Reserva tu aventura
                 </a>
-                <!-- Botón de la Hero Section Actualizado -->
                 <a href="#details" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-bold transition text-lg flex items-center justify-center gap-2">
                     <span data-i18n="cta_secondary">Detalles y Requisitos</span> <i class="fa-solid fa-shield-halved text-xs"></i>
                 </a>
@@ -211,13 +184,11 @@
         </div>
     </section>
 
-    <!-- Value Prop / Intro -->
     <section id="experience" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-deepBlue mb-4" data-i18n="intro_title">La Travesía de las Reinas del Océano</h2>
                 <div class="w-20 h-1 bg-oceanBlue mx-auto rounded-full"></div>
-                <!-- Párrafo de la experiencia actualizado con el nuevo texto -->
                 <p class="mt-4 text-slate-600 max-w-3xl mx-auto" data-i18n="intro_desc">
                     No es una leyenda, ¡es la asombrosa realidad científica que ocurre cada invierno en nuestras costas! La Travesía de las Reinas del Océano. Entre noviembre y marzo, Playa del Carmen se convierte en el epicentro de una migración biológica monumental. No se trata de machos curiosos, ¡sino de poderosas hembras de tiburón toro (<i>Carcharhinus leucas</i>) PREÑADAS que desafían el océano! ¿La Misión? El instinto más primitivo y vital: la REPRODUCCIÓN.
                 </p>
@@ -249,15 +220,12 @@
         </div>
     </section>
 
-    <!-- Details & Pricing Section -->
     <section id="details" class="py-20 bg-deepBlue text-white relative overflow-hidden">
         <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-oceanBlue/20 rounded-full blur-3xl"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
-                <!-- Left: Info -->
                 <div>
-                    <!-- Título modificado: se quitó (2025-2026) -->
                     <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="details_title">Detalles y Requisitos</h2>
                     <ul class="space-y-6">
                         <li class="flex items-start">
@@ -305,16 +273,12 @@
                     </div>
                 </div>
 
-                <!-- Right: Image (detalles-req-fondo.jpg) -->
-                <!-- Se elimina el contenido del div para dejar solo la imagen de fondo de la clase details-image -->
                 <div class="details-image p-8 rounded-xl aspect-square lg:aspect-auto h-full min-h-[400px]">
-                    <!-- Contenido de texto sobre la imagen de fondo ELIMINADO -->
-                </div>
+                    </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section (3 Videos y 3 Fotos) -->
     <section id="gallery" class="py-20 bg-sand">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -322,58 +286,48 @@
                 <div class="w-20 h-1 bg-oceanBlue mx-auto rounded-full"></div>
                 <p class="mt-4 text-slate-600 max-w-2xl mx-auto" data-i18n="gallery_desc">Imágenes y videos de nuestras inmersiones de observación. Estos son los majestuosos encuentros que te esperan bajo las aguas de Playa del Carmen.</p>
 
-            <!-- Carrusel de Galería - Contenedor Flex con Scroll Snap y Grid Responsive -->
             <div class="flex overflow-x-scroll snap-x snap-mandatory space-x-8 pb-4 no-scrollbar md:grid md:grid-cols-3 md:space-x-0 md:gap-8">
                 
-                <!-- 1. Video Clip Principal (Local) -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <!-- Video con autoplay, loop, muted y playsinline -->
                     <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+1">
                         <source src="galeria-video.mp4" type="video/mp4">
                         Tu navegador no soporta el video.
                     </video>
                 </div>
                 
-                <!-- 2. Video Clip (Encuentro Cercano) (Local) -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <!-- Video con autoplay, loop, muted y playsinline -->
                     <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+2">
                         <source src="galeria-video-2.mp4" type="video/mp4">
                         Tu navegador no soporta el video.
                     </video>
                 </div>
 
-                <!-- 3. Video Clip (Guía/Grupo) (Local) -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <!-- Video con autoplay, loop, muted y playsinline -->
                     <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+3">
                         <source src="galeria-video-3.mp4" type="video/mp4">
                         Tu navegador no soporta el video.
                     </video>
                 </div>
 
-                <!-- 4. Image: Shark Profile -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
                     <img src="galeria-encuentro-1.jpg" 
-                         alt="Perfil lateral de un tiburón toro hembra" 
-                         class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                         onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f172a/ffffff?text=FOTO+1:\n+Perfil+del+Tiburón';">
+                        alt="Perfil lateral de un tiburón toro hembra" 
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f172a/ffffff?text=FOTO+1:\n+Perfil+del+Tiburón';">
                 </div>
 
-                <!-- 5. Image: Diver Perspective -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
                     <img src="galeria-nadador-2.jpg" 
-                         alt="Buceador observando un tiburón toro desde abajo" 
-                         class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                         onerror="this.onerror=null;this.src='https://placehold.co/800x600/1e40af/ffffff?text=FOTO+2:\n+Buceador+y+Tiburón';">
+                        alt="Buceador observando un tiburón toro desde abajo" 
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/1e40af/ffffff?text=FOTO+2:\n+Buceador+y+Tiburón';">
                 </div>
 
-                <!-- 6. Image: Guide/Instructor -->
                 <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
                     <img src="galeria-guia-3.jpg" 
-                         alt="Guía o instructor de buceo señalando un tiburón toro" 
-                         class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                         onerror="this.onerror=null;this.src='https://placehold.co/800x600/0ea5e9/0f172a?text=FOTO+3:\n+Instructor+Guiando';">
+                        alt="Guía o instructor de buceo señalando un tiburón toro" 
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
+                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/0ea5e9/0f172a?text=FOTO+3:\n+Instructor+Guiando';">
                 </div>
             </div>
 
@@ -386,7 +340,6 @@
         </div>
     </section>
 
-    <!-- About Us Section (Foto de Lydia Actualizada) -->
     <section id="about" class="py-20 bg-deepBlue text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -395,19 +348,16 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
-                <!-- Left: Foto de Lydia (lydia.jpg) -->
                 <div class="lg:col-span-1 flex justify-center">
                     <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent shadow-2xl bg-slate-700">
-                        <!-- Carga lydia.jpg como pediste -->
                         <img src="lydia.jpg" 
-                             alt="Lydia Dive Instructor Portrait" 
-                             class="w-full h-full object-cover"
-                             onerror="this.onerror=null;this.src='https://placehold.co/320x320/0f172a/ffffff?text=LYDIA+DIVE\n+INSTRUCTOR';"
+                            alt="Lydia Dive Instructor Portrait" 
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/320x320/0f172a/ffffff?text=LYDIA+DIVE\n+INSTRUCTOR';"
                         >
                     </div>
                 </div>
 
-                <!-- Right: Content -->
                 <div class="lg:col-span-2 space-y-6 text-slate-300">
                     <p class="text-xl font-light leading-relaxed" data-i18n="about_intro">
                         Soy Lydia Ramírez, PADI Dive Instructor, y mi misión es conectar a las personas con el océano de forma segura, respetuosa y con profundo conocimiento biológico.
@@ -423,7 +373,6 @@
         </div>
     </section>
 
-    <!-- NUEVA SECCIÓN: Tips de Inmersión -->
     <section id="tips" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -434,7 +383,6 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                 
-                <!-- Tip 1: Equipo -->
                 <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
                     <i class="fa-solid fa-fins text-accent text-3xl w-12 text-center flex-shrink-0"></i>
                     <div class="ml-4">
@@ -443,7 +391,6 @@
                     </div>
                 </div>
                 
-                <!-- Tip 2: Seguridad -->
                 <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
                     <i class="fa-solid fa-user-shield text-accent text-3xl w-12 text-center flex-shrink-0"></i>
                     <div class="ml-4">
@@ -452,7 +399,6 @@
                     </div>
                 </div>
 
-                <!-- Tip 3: Respeto -->
                 <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
                     <i class="fa-solid fa-eye text-accent text-3xl w-12 text-center flex-shrink-0"></i>
                     <div class="ml-4">
@@ -461,7 +407,6 @@
                     </div>
                 </div>
 
-                <!-- Tip 4: Tiempo -->
                 <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
                     <i class="fa-solid fa-clock text-accent text-3xl w-12 text-center flex-shrink-0"></i>
                     <div class="ml-4">
@@ -470,7 +415,6 @@
                     </div>
                 </div>
 
-                <!-- Tip 5: Recuerdos -->
                 <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
                     <i class="fa-solid fa-heart text-accent text-3xl w-12 text-center flex-shrink-0"></i>
                     <div class="ml-4">
@@ -479,7 +423,6 @@
                     </div>
                 </div>
 
-                <!-- Tip 6: Safety Stop -->
                 <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
                     <i class="fa-solid fa-arrow-up-from-water text-accent text-3xl w-12 text-center flex-shrink-0"></i>
                     <div class="ml-4">
@@ -493,7 +436,6 @@
         </div>
     </section>
 
-    <!-- More Tours Section -->
     <section id="more-tours" class="py-20 bg-sand">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -505,309 +447,523 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Card 1: Cenotes -->
-                <a href="https://wa.me/message/FYKKQJHODRX7P1" target="_blank" class="block bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300 opacity-70 hover:opacity-100">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('tour-cenotes.jpg');"></div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
+                    <img src="tour-cenote.jpg" alt="Buceo en Cenotes en la Riviera Maya" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e40af/ffffff?text=CENOTES'">
                     <div class="p-6">
-                        <span class="text-sm font-semibold text-oceanBlue" data-i18n="tour_tag_cenotes">Buceo Caverna</span>
-                        <h3 class="text-xl font-bold text-deepBlue mt-2" data-i18n="tour_title_cenotes">Cenotes Mágicos</h3>
+                        <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_1_title">Buceo en Cenotes</h3>
+                        <p class="text-slate-500 text-sm" data-i18n="more_tours_card_1_desc">Explora el sistema de cuevas subterráneas de la Riviera Maya. Una experiencia única.</p>
+                        <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
                     </div>
-                </a>
-                <!-- Card 2: Cozumel -->
-                <a href="https://wa.me/message/FYKKQJHODRX7P1" target="_blank" class="block bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300 opacity-70 hover:opacity-100">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('tour-cozumel.jpg');"></div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
+                    <img src="tour-cozumel.jpg" alt="Arrecifes de Cozumel" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0ea5e9/0f172a?text=COZUMEL'">
                     <div class="p-6">
-                        <span class="text-sm font-semibold text-oceanBlue" data-i18n="tour_tag_cozumel">Arrecife Mundial</span>
-                        <h3 class="text-xl font-bold text-deepBlue mt-2" data-i18n="tour_title_cozumel">Buceo en Cozumel</h3>
+                        <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_2_title">Cozumel Arrecifes</h3>
+                        <p class="text-slate-500 text-sm" data-i18n="more_tours_card_2_desc">Inmersiones a la deriva en una de las mejores paredes de arrecifes del mundo.</p>
+                        <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
                     </div>
-                </a>
-                <!-- Card 3: Whale Shark (Temporada) -->
-                <a href="https://wa.me/message/FYKKQJHODRX7P1" target="_blank" class="block bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
-                     <div class="relative h-48 bg-cover bg-center" style="background-image: url('tour-tiburon-ballena.jpg');">
-                        <span class="absolute top-2 right-2 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full" data-i18n="tour_tag_season">Solo Verano</span>
-                    </div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
+                    <img src="tour-padi.jpg" alt="Curso de Buceo PADI" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/ffffff?text=CURSO+PADI'">
                     <div class="p-6">
-                        <span class="text-sm font-semibold text-oceanBlue" data-i18n="tour_tag_whale">Snorkel (Gigantes)</span>
-                        <h3 class="text-xl font-bold text-deepBlue mt-2" data-i18n="tour_title_whale">Tiburón Ballena</h3>
+                        <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_3_title">Curso de Buceo PADI</h3>
+                        <p class="text-slate-500 text-sm" data-i18n="more_tours_card_3_desc">Obtén tu certificación Open Water o Avanzada con instructores expertos.</p>
+                        <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
                     </div>
-                </a>
-                <!-- Card 4: Isla Mujeres -->
-                <a href="https://wa.me/message/FYKKQJHODRX7P1" target="_blank" class="block bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300 opacity-70 hover:opacity-100">
-                    <div class="h-48 bg-cover bg-center" style="background-image: url('tour-isla-mujeres.jpg');"></div>
+                </div>
+                <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
+                    <img src="tour-nocturno.jpg" alt="Buceo Nocturno" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/0ea5e9?text=NOCTURNO'">
                     <div class="p-6">
-                        <span class="text-sm font-semibold text-oceanBlue" data-i18n="tour_tag_isla">Paraíso Caribeño</span>
-                        <h3 class="text-xl font-bold text-deepBlue mt-2" data-i18n="tour_title_isla">Tour Isla Mujeres</h3>
+                        <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_4_title">Buceo Nocturno</h3>
+                        <p class="text-slate-500 text-sm" data-i18n="more_tours_card_4_desc">Descubre la vida marina nocturna, el arrecife cobra vida en la oscuridad.</p>
+                        <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
                     </div>
-                </a>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Contact & Booking Section -->
-    <section id="book" class="contact-bg py-24 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl md:text-5xl font-bold mb-4" data-i18n="contact_title">¡Reserva tu Inmersión con Tiburón Toro 2025-2026!</h2>
-            <p class="text-xl text-slate-200 mb-10 max-w-3xl mx-auto font-light" data-i18n="contact_desc">
-                Los espacios son limitados. Contacta a Lydia, confirma tu certificación y asegura tu lugar en esta aventura inolvidable.
+    
+    <section id="book" class="contact-bg py-20 bg-oceanBlue text-white">
+        <div class="max-w-4xl mx-auto text-center px-4">
+            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight" data-i18n="book_title">Reserva Tu Inmersión con el Tiburón Toro</h2>
+            <p class="text-xl text-slate-200 mb-8 max-w-2xl mx-auto" data-i18n="book_desc">
+                Garantiza tu lugar en la temporada 2025-2026. Reserva rápida y segura a través de WhatsApp.
             </p>
-
-            <div class="flex flex-col sm:flex-row justify-center gap-6">
-                <!-- WhatsApp CTA (Main) -->
-                <a href="https://wa.me/message/FYKKQJHODRX7P1" target="_blank" class="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-xl shadow-green-500/40 flex items-center justify-center gap-3">
-                    <i class="fa-brands fa-whatsapp text-2xl"></i>
-                    <span data-i18n="contact_whatsapp">Reservar por WhatsApp</span>
-                </a>
-                
-                <!-- Instagram CTA -->
-                <a href="https://www.instagram.com/lyli.ramz" target="_blank" class="bg-pink-600 hover:bg-pink-700 text-white px-8 py-4 rounded-full font-bold text-lg transition shadow-xl shadow-pink-500/40 flex items-center justify-center gap-3">
-                    <i class="fa-brands fa-instagram text-2xl"></i>
-                    <span data-i18n="contact_instagram">Enviar DM por Instagram</span>
-                </a>
-            </div>
-
-            <div class="mt-12 text-center text-sm text-slate-300">
-                <p data-i18n="contact_note">*Recuerda que se requiere un depósito del 50% para confirmar tu reservación.</p>
-              
-            </div>
+            <a href="https://wa.me/529841857943" target="_blank" class="whatsapp-cta inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold transition text-xl shadow-lg shadow-green-500/50">
+                <i class="fa-brands fa-whatsapp text-2xl"></i>
+                <span data-i18n="book_btn">Enviar Mensaje de Reserva por WhatsApp</span>
+            </a>
+            <p class="text-sm text-slate-400 mt-4">WhatsApp Business: +52 984 185 7943</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-deepBlue border-t border-slate-700 py-8">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500 text-sm">
-            <p>&copy; 2025 Bull Shark Tours Playa del Carmen. Todos los derechos reservados.</p>
-            <p class="mt-2" data-i18n="footer_operator">Operado por Lydia Dive Instructor (@lyli.ramz)</p>
-            <div class="mt-4 space-x-4">
-                <a href="#book" class="hover:text-accent transition" data-i18n="footer_contact">Contacto</a>
-                <a href="#details" class="hover:text-accent transition" data-i18n="footer_policy">Política de Cancelación</a>
+    <footer class="bg-deepBlue text-slate-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-slate-700 pb-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4">BULL SHARK <span class="font-light">PLAYA</span></h4>
+                    <p class="text-sm">Especialistas en inmersiones de observación de Tiburón Toro en Playa del Carmen.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-i18n="footer_links">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#experience" class="hover:text-accent transition" data-i18n="nav_tour">El Tour</a></li>
+                        <li><a href="#details" class="hover:text-accent transition" data-i18n="nav_details">Detalles</a></li>
+                        <li><a href="#gallery" class="hover:text-accent transition" data-i18n="nav_gallery">Galería</a></li>
+                        <li><a href="#about" class="hover:text-accent transition" data-i18n="nav_about">Nosotros</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-i18n="footer_contact_info">Información de Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fa-solid fa-phone mr-2 text-accent"></i>+52 984 185 7943</li>
+                        <li><i class="fa-solid fa-envelope mr-2 text-accent"></i>info@bullsharkplaya.com</li>
+                        <li><i class="fa-solid fa-location-dot mr-2 text-accent"></i>Playa del Carmen, Q. Roo.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-white mb-4" data-i18n="footer_follow">Síguenos en Redes</h4>
+                    <div class="flex space-x-4 text-2xl">
+                        <a href="https://www.instagram.com/lyli.ramz" target="_blank" class="hover:text-accent transition"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/BullSharkPlayaEcotours" target="_blank" class="hover:text-accent transition"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://wa.me/529841857943" target="_blank" class="hover:text-accent transition"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-sm text-slate-500">
+                <p data-i18n="footer_copy">&copy; 2025 Bull Shark Playa Ecotours. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Botón Flotante de WhatsApp -->
-    <a href="https://wa.me/message/FYKKQJHODRX7P1" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-xl z-40 transition transform hover:scale-110">
-        <i class="fa-brands fa-whatsapp text-4xl"></i>
-    </a>
 
-
-    <!-- JavaScript for Mobile Menu and Language Switch -->
     <script>
-        // --- Language and Translation Setup ---
+        // Objeto de traducciones (el atributo data-i18n en HTML debe coincidir con la clave)
         const translations = {
-            'es': {
-                nav_tour: 'El Tour',
-                nav_details: 'Detalles',
-                nav_gallery: 'Galería',
-                nav_about: 'Nosotros',
-                nav_tips: 'Tips', // NUEVO
-                nav_more: 'Más Tours (PRÓXIMAMENTE)',
-                nav_book: 'Reservar Ahora',
-                hero_subtitle: 'Temporada 2025 - 2026, Playa del Carmen',
-                hero_title: 'Buceo con <br> Tiburones Toro',
-                hero_desc: 'Una experiencia de buceo de clase mundial. Adrenalina segura y respeto por las hembras preñadas, las reinas del océano.',
-                cta_primary: 'Reserva tu aventura',
-                // CAMBIO A DETALLES Y REQUISITOS
-                cta_secondary: 'Detalles y Requisitos',
-                intro_title: 'La Travesía de las Reinas del Océano',
-                // TEXTO ACTUALIZADO
-                intro_desc: 'No es una leyenda, ¡es la asombrosa realidad científica que ocurre cada invierno en nuestras costas! La Travesía de las Reinas del Océano. Entre noviembre y marzo, Playa del Carmen se convierte en el epicentro de una migración biológica monumental. No se trata de machos curiosos, ¡sino de poderosas hembras de tiburón toro (<i>Carcharhinus leucas</i>) PREÑADAS que desafían el océano! ¿La Misión? El instinto más primitivo y vital: la REPRODUCCIÓN.',
-                feat_1_title: 'Protocolo de Calma y Mimetismo',
-                feat_1_desc: 'Uso obligatorio de equipo de *color neutro (negro)*. La inmovilidad en el fondo de arena garantiza la seguridad.',
-                feat_2_title: 'Observación Responsable',
-                feat_2_desc: 'No es una actividad de alimentación ni contacto. Es un buceo de observación respetuoso y controlado.',
-                feat_3_title: 'Superdepredadores Vitales',
-                feat_3_desc: 'Conéctate con el pulso salvaje del planeta y entiende la importancia crítica de su conservación.',
-                // TÍTULO ACTUALIZADO (sin 2025-2026)
-                details_title: 'Detalles y Requisitos',
-                det_season_title: 'Fechas y Horarios',
-                det_season_desc: '*Activo del 15 de noviembre 2025 a marzo 2026* <br> Lunes y Viernes: 13:00 hrs <br> Miércoles y Jueves: 09:30 hrs. <br> Duración total: 4 hrs. aprox.',
-                det_req_title: 'Requisitos OBLIGATORIOS',
-                det_req_1: 'Certificación mínima: *Advanced Open Water Diver.*',
-                det_req_2: 'Último buceo realizado dentro de los *últimos 12 meses* (si no, refresher previo).',
-                det_req_3: 'Uso de equipo de buceo de *color negro* (por seguridad y mimetismo).',
-                det_meeting_title: 'Punto de Encuentro',
-                det_meeting_desc: 'Reunión frente al hotel The Reef Coco Beach (Calle Flamingos, Col. Luis Donaldo Colosio).',
-                price_label: 'Costo de la actividad',
-                price_tanks_note: 'El precio incluye *Dos Tanques de Buceo (Dos Inmersiones)*. <br> Fotografía es costo extra.',
-                cta_reserve_details: '¡Aparta tu lugar con el 50%!',
-                det_img_title: 'Protocolo Crucial',
-                det_img_desc: 'El uso de colores neutros (negro) y la calma absoluta son claves para una interacción segura y respetuosa. Observamos, no interactuamos.',
-                gallery_title: 'Galería: El Rostro de la Nobleza',
-                gallery_desc: 'Imágenes y videos de nuestras inmersiones de observación. Estos son los majestuosos encuentros que te esperan bajo las aguas de Playa del Carmen.',
-                gallery_cta: 'Ver más en Instagram (@lyli.ramz)',
-                about_title: 'Tu Guía: Lydia, Dive Instructor PADI',
-                about_intro: 'Soy Lydia Ramírez, PADI Dive Instructor, y mi misión es conectar a las personas con el océano de forma segura, respetuosa y con profundo conocimiento biológico.',
-                about_focus: 'Mi enfoque en el buceo con tiburón toro está 100% centrado en la *biología marina y la observación responsable*. No promovemos el *feeding* ni el contacto. Operamos bajo un protocolo estricto de *calma y mimetismo* para que la inmersión sea una experiencia sublime y de cero impacto.',
-                about_commitment: 'Cada buceo con nosotros es una clase maestra sobre la conservación del ecosistema marino y la nobleza de la Reina del Océano. ¡Te espero bajo el agua!',
-                // --- NUEVOS TIPS ---
-                tips_section_title: 'Tips de Inmersión Bull Shark',
-                tips_section_subtitle: 'Mini Guía para Bucear sin Dejar Huella',
-                tip_1_title: 'Check Up del Equipo',
-                tip_1_desc: '¡Checa tu equipo! No queremos que nada falle una vez abajo del agua.',
-                tip_2_title: 'Seguridad y Mimetismo (Crucial!)',
-                tip_2_desc: 'Por seguridad, es una práctica estándar utilizar equipo de color neutro, preferiblemente negro.',
-                tip_3_title: '¡Respeta tu Entorno!',
-                tip_3_desc: 'Una vez abajo, ¡observa sin tocar! Somos invitados en su mundo.',
-                tip_4_title: 'Toma Tú Tiempo',
-                tip_4_desc: 'Baja al agua con calma. Mejor admirar la belleza natural con tranquilidad.',
-                tip_5_title: '¡Recuerdos Mentales!',
-                tip_5_desc: 'Los únicos recuerdos que nos podemos llevar, son buenas memorias y grandes fotos.',
-                tip_6_title: 'Antes de Subir, Parada de Seguridad',
-                tip_6_desc: 'Ascender en la línea despacio y sujetar la línea para hacer la parada de seguridad 5 metros por 3 minutos.',
-                tips_footer: '¡Listos para la Aventura!',
-                // --- FIN TIPS ---
-                more_tours_title: 'Más Aventuras Marinas (Próximamente)',
-                more_tours_desc: 'El océano es vasto. Próximamente, explora más maravillas del Caribe Mexicano con nosotros.',
-                tour_tag_cenotes: 'Buceo Caverna',
-                tour_title_cenotes: 'Cenotes Mágicos',
-                tour_tag_cozumel: 'Arrecife Mundial',
-                tour_title_cozumel: 'Buceo en Cozumel',
-                tour_tag_season: 'Solo Verano',
-                tour_tag_whale: 'Snorkel (Gigantes)',
-                tour_title_whale: 'Tiburón Ballena',
-                tour_tag_isla: 'Paraíso Caribeño',
-                tour_title_isla: 'Tour Isla Mujeres',
-                contact_title: '¡Reserva tu Inmersión con Tiburón Toro 2025-2026!',
-                contact_desc: 'Los espacios son limitados. Contacta a Lydia, confirma tu certificación y asegura tu lugar en esta aventura inolvidable.',
-                contact_whatsapp: 'Reservar por WhatsApp',
-                contact_instagram: 'Enviar DM por Instagram',
-                contact_note: '*Recuerda que se requiere un depósito del 50% para confirmar tu reservación.',
-                
-                footer_operator: 'Operado por Lydia Dive Instructor (@lyli.ramz)',
-                footer_contact: 'Contacto',
-                footer_policy: 'Política de Cancelación'
+            // Claves de la Navegación (NAV)
+            nav_tour: {
+                es: "El Tour",
+                en: "The Tour"
             },
-            'en': {
-                nav_tour: 'The Tour',
-                nav_details: 'Details',
-                nav_gallery: 'Gallery',
-                nav_about: 'About Us',
-                nav_tips: 'Tips', // NEW
-                nav_more: 'More Tours (COMING SOON)',
-                nav_book: 'Book Now',
-                hero_subtitle: 'Season 2025 - 2026, Playa del Carmen',
-                hero_title: 'Bull Shark <br> Diving',
-                hero_desc: 'A world-class diving experience. Safe adrenaline and respect for the pregnant females, the Queens of the Ocean.',
-                cta_primary: 'Book your adventure',
-                // CAMBIO A DETAILS AND REQUIREMENTS
-                cta_secondary: 'Details and Requirements',
-                intro_title: 'The Journey of the Queens of the Ocean',
-                // TEXTO ACTUALIZADO (TRADUCCIÓN)
-                intro_desc: 'It\'s not a legend, it\'s the astonishing scientific reality that occurs every winter on our coasts! The Journey of the Queens of the Ocean. Between November and March, Playa del Carmen becomes the epicenter of a monumental biological migration. It\'s not curious males, but powerful PREGNANT female bull sharks (<i>Carcharhinus leucas</i>) challenging the ocean! The Mission? The most primitive and vital instinct: REPRODUCTION.',
-                feat_1_title: 'Protocol of Calm and Mimicry',
-                feat_1_desc: 'Mandatory use of *neutral colored (black)* gear. Immobility on the sandy bottom guarantees safety.',
-                feat_2_title: 'Responsible Observation',
-                feat_2_desc: 'This is not a feeding or contact activity. It is a respectful and controlled observation dive.',
-                feat_3_title: 'Vital Apex Predators',
-                feat_3_desc: 'Connect with the wild pulse of the planet and understand the critical importance of their conservation.',
-                // TÍTULO ACTUALIZADO (sin 2025-2026)
-                details_title: 'Details and Requirements',
-                det_season_title: 'Dates and Times',
-                det_season_desc: '*Active from November 15, 2025 to March 2026* <br> Mondays and Fridays: 13:00 hrs <br> Wednesdays and Thursdays: 09:30 hrs. <br> Total duration: approx. 4 hrs.',
-                det_req_title: 'MANDATORY Requirements',
-                det_req_1: 'Minimum certification: *Advanced Open Water Diver.*',
-                det_req_2: 'Last dive completed within the *last 12 months* (if not, prior refresher required).',
-                det_req_3: 'Mandatory use of *black* dive gear (for safety and mimicry).',
-                det_meeting_title: 'Meeting Point',
-                det_meeting_desc: 'Meeting in front of The Reef Coco Beach hotel (Flamingos Street, Luis Donaldo Colosio neighborhood).',
-                price_label: 'Activity Cost',
-                price_tanks_note: 'The price includes *Two Dive Tanks (Two Dives)*. <br> Photography is an extra cost.',
-                cta_reserve_details: 'Reserve your spot with 50%!',
-                det_img_title: 'Crucial Protocol',
-                det_img_desc: 'Using neutral colors (black) and absolute calm are key to a safe and respectful interaction. We observe, we do not interact.',
-                gallery_title: 'Gallery: The Face of Nobility',
-                gallery_desc: 'Images and videos from our observation dives. These are the majestic encounters that await you beneath the waters of Playa del Carmen.',
-                gallery_cta: 'See more on Instagram (@lyli.ramz)',
-                about_title: 'Your Guide: Lydia, PADI Dive Instructor',
-                about_intro: 'I am Lydia Ramírez, PADI Dive Instructor, and my mission is to connect people with the ocean safely, respectfully, and with deep biological knowledge.',
-                about_focus: 'My focus on bull shark diving is 100% centered on *marine biology and responsible observation*. We do not promote feeding or contact. We operate under a strict *calm and mimicry* protocol to ensure the immersion is a sublime, zero-impact experience.',
-                about_commitment: 'Every dive with us is a master class on the conservation of the marine ecosystem and the nobility of the Queen of the Ocean. I await you underwater!',
-                // --- NEW TIPS ---
-                tips_section_title: 'Bull Shark Diving Tips',
-                tips_section_subtitle: 'Mini Guide to Diving Without Leaving a Trace',
-                tip_1_title: 'Check Your Equipment!',
-                tip_1_desc: 'Check your equipment! We don\'t want anything to go wrong once we\'re underwater.',
-                tip_2_title: 'Safety and Camouflage (Crucial!)',
-                tip_2_desc: 'For safety, it\'s standard practice to use neutral-colored equipment, preferably black.',
-                tip_3_title: 'Respect Your Surroundings!',
-                tip_3_desc: 'Once down below, observe without touching. We are guests in their world!',
-                tip_4_title: 'Take Your Time',
-                tip_4_desc: 'Go into the water calmly. It\'s best to admire the natural beauty in peace and quiet.',
-                tip_5_title: 'Mental Memories!',
-                tip_5_desc: 'The only memories we can take with us are good memories and great photos.',
-                tip_6_title: 'Before Ascending, Make a Safety Stop.',
-                tip_6_desc: 'Ascend the line slowly and hold the line to make the safety stop 5 meters for 3 minutes.',
-                tips_footer: 'Ready for this Adventure!',
-                // --- END TIPS ---
-                more_tours_title: 'More Marine Adventures (Coming Soon)',
-                more_tours_desc: 'The ocean is vast. Soon, explore more wonders of the Mexican Caribbean with us.',
-                tour_tag_cenotes: 'Cavern Diving',
-                tour_title_cenotes: 'Magical Cenotes',
-                tour_tag_cozumel: 'World Reef',
-                tour_title_cozumel: 'Cozumel Diving',
-                tour_tag_season: 'Summer Only',
-                tour_tag_whale: 'Snorkel (Giants)',
-                tour_title_whale: 'Whale Shark',
-                tour_tag_isla: 'Caribbean Paradise',
-                tour_title_isla: 'Isla Mujeres Tour',
-                contact_title: 'Book Your Bull Shark Dive 2025-2026!',
-                contact_desc: 'Spaces are limited. Contact Lydia, confirm your certification and secure your spot in this unforgettable adventure.',
-                contact_whatsapp: 'Book via WhatsApp',
-                contact_instagram: 'Send DM on Instagram',
-                contact_note: '*Remember a 50% deposit is required to confirm your reservation.',
-                
-                footer_operator: 'Operated by Lydia Dive Instructor (@lyli.ramz)',
-                footer_contact: 'Contact',
-                footer_policy: 'Cancellation Policy'
-            }
+            nav_details: {
+                es: "Detalles",
+                en: "Details"
+            },
+            nav_gallery: {
+                es: "Galería",
+                en: "Gallery"
+            },
+            nav_about: {
+                es: "Nosotros",
+                en: "About Us"
+            },
+            nav_tips: {
+                es: "Tips",
+                en: "Tips"
+            },
+            nav_more: {
+                es: "Más Tours (PRÓXIMAMENTE)",
+                en: "More Tours (COMING SOON)"
+            },
+            nav_book: {
+                es: "Reservar Ahora",
+                en: "Book Now"
+            },
+            cta_reserve_details: {
+                es: "¡Aparta tu lugar con el 50%!",
+                en: "Secure your spot with 50%!"
+            },
+
+            // Claves de la Sección HERO
+            hero_subtitle: {
+                es: "Temporada 2025 - 2026, Playa del Carmen",
+                en: "2025 - 2026 Season, Playa del Carmen"
+            },
+            hero_title: {
+                es: "Buceo con <br> Tiburones Toro",
+                en: "Bull Shark <br> Diving"
+            },
+            hero_desc: {
+                es: "Una experiencia de buceo de clase mundial. Adrenalina segura y respeto por las hembras preñadas, las reinas del océano.",
+                en: "A world-class diving experience. Safe adrenaline and respect for the pregnant females, the queens of the ocean."
+            },
+            cta_primary: {
+                es: "Reserva tu aventura",
+                en: "Book Your Adventure"
+            },
+            cta_secondary: {
+                es: "Detalles y Requisitos",
+                en: "Details & Requirements"
+            },
+
+            // Claves de la Sección INTRO
+            intro_title: {
+                es: "La Travesía de las Reinas del Océano",
+                en: "The Journey of the Ocean Queens"
+            },
+            intro_desc: {
+                es: "No es una leyenda, ¡es la asombrosa realidad científica que ocurre cada invierno en nuestras costas! La Travesía de las Reinas del Océano. Entre noviembre y marzo, Playa del Carmen se convierte en el epicentro de una migración biológica monumental. No se trata de machos curiosos, ¡sino de poderosas hembras de tiburón toro (<i>Carcharhinus leucas</i>) PREÑADAS que desafían el océano! ¿La Misión? El instinto más primitivo y vital: la REPRODUCCIÓN.",
+                en: "It's not a legend—it's the astonishing scientific reality that occurs every winter on our shores! The Journey of the Ocean Queens. Between November and March, Playa del Carmen becomes the epicenter of a monumental biological migration. It's not about curious males, but powerful PREGNANT Bull Shark females (<i>Carcharhinus leucas</i>) challenging the ocean! The Mission? The most primitive and vital instinct: REPRODUCTION."
+            },
+            feat_1_title: {
+                es: "Protocolo de Calma y Mimetismo",
+                en: "Calm and Mimicry Protocol"
+            },
+            feat_1_desc: {
+                es: "Uso obligatorio de equipo de *color neutro (negro)*. La inmovilidad en el fondo de arena garantiza la seguridad.",
+                en: "Mandatory use of *neutral-colored (black)* gear. Immobility on the sandy bottom ensures safety."
+            },
+            feat_2_title: {
+                es: "Observación Responsable",
+                en: "Responsible Observation"
+            },
+            feat_2_desc: {
+                es: "No es una actividad de alimentación ni contacto. Es un buceo de observación respetuoso y controlado.",
+                en: "This is not a feeding or contact activity. It's a respectful and controlled observation dive."
+            },
+            feat_3_title: {
+                es: "Superdepredadores Vitales",
+                en: "Vital Apex Predators"
+            },
+            feat_3_desc: {
+                es: "Conéctate con el pulso salvaje del planeta y entiende la importancia crítica de su conservación.",
+                en: "Connect with the wild pulse of the planet and understand the critical importance of their conservation."
+            },
+
+            // Claves de la Sección DETALLES
+            details_title: {
+                es: "Detalles y Requisitos",
+                en: "Details & Requirements"
+            },
+            det_season_title: {
+                es: "Fechas y Horarios",
+                en: "Dates and Times"
+            },
+            det_season_desc: {
+                es: "*Activo del 15 de noviembre 2025 a marzo 2026* <br> Lunes y Viernes: 13:00 hrs <br> Miércoles y Jueves: 09:30 hrs. <br> Duración total: 4 hrs. aprox.",
+                en: "*Active from November 15, 2025, to March 2026* <br> Monday and Friday: 1:00 PM <br> Wednesday and Thursday: 9:30 AM. <br> Total duration: 4 hrs. approx."
+            },
+            det_req_title: {
+                es: "Requisitos OBLIGATORIOS",
+                en: "MANDATORY Requirements"
+            },
+            det_req_1: {
+                es: "Certificación mínima: *Advanced Open Water Diver.*",
+                en: "Minimum certification: *Advanced Open Water Diver.*"
+            },
+            det_req_2: {
+                es: "Último buceo realizado dentro de los *últimos 12 meses* (si no, refresher previo).",
+                en: "Last dive completed within the *last 12 months* (if not, a prior refresher is required)."
+            },
+            det_req_3: {
+                es: "Uso de equipo de buceo de *color negro* (por seguridad y mimetismo).",
+                en: "Use of *black-colored* diving gear (for safety and mimicry)."
+            },
+            det_meeting_title: {
+                es: "Punto de Encuentro",
+                en: "Meeting Point"
+            },
+            det_meeting_desc: {
+                es: "Reunión frente al hotel The Reef Coco Beach (Calle Flamingos, Col. Luis Donaldo Colosio).",
+                en: "Meeting in front of The Reef Coco Beach hotel (Calle Flamingos, Col. Luis Donaldo Colosio)."
+            },
+            price_label: {
+                es: "Costo de la actividad",
+                en: "Activity Cost"
+            },
+            price_tanks_note: {
+                es: "El precio incluye *Dos Tanques de Buceo (Dos Inmersiones)*. <br> Fotografía es costo extra.",
+                en: "Price includes *Two Dive Tanks (Two Dives)*. <br> Photography is an extra cost."
+            },
+
+            // Claves de la Sección GALERÍA
+            gallery_title: {
+                es: "Galería: El Rostro de la Nobleza",
+                en: "Gallery: The Face of Nobility"
+            },
+            gallery_desc: {
+                es: "Imágenes y videos de nuestras inmersiones de observación. Estos son los majestuosos encuentros que te esperan bajo las aguas de Playa del Carmen.",
+                en: "Images and videos from our observation dives. These are the majestic encounters awaiting you beneath the waters of Playa del Carmen."
+            },
+            gallery_cta: {
+                es: "Ver más en Instagram (@lyli.ramz)",
+                en: "See more on Instagram (@lyli.ramz)"
+            },
+
+            // Claves de la Sección NOSOTROS
+            about_title: {
+                es: "Tu Guía: Lydia, Dive Instructor PADI",
+                en: "Your Guide: Lydia, PADI Dive Instructor"
+            },
+            about_intro: {
+                es: "Soy Lydia Ramírez, PADI Dive Instructor, y mi misión es conectar a las personas con el océano de forma segura, respetuosa y con profundo conocimiento biológico.",
+                en: "I am Lydia Ramírez, PADI Dive Instructor, and my mission is to connect people with the ocean safely, respectfully, and with deep biological knowledge."
+            },
+            about_focus: {
+                es: "Mi enfoque en el buceo con tiburón toro está 100% centrado en la *biología marina y la observación responsable*. No promovemos el *feeding* ni el contacto. Operamos bajo un protocolo estricto de *calma y mimetismo* para que la inmersión sea una experiencia sublime y de cero impacto.",
+                en: "My focus on bull shark diving is 100% centered on *marine biology and responsible observation*. We do not promote *feeding* or contact. We operate under a strict protocol of *calmness and mimicry* for a sublime, zero-impact dive experience."
+            },
+            about_commitment: {
+                es: "Cada buceo con nosotros es una clase maestra sobre la conservación del ecosistema marino y la nobleza de la Reina del Océano. ¡Te espero bajo el agua!",
+                en: "Every dive with us is a masterclass on marine ecosystem conservation and the nobility of the Ocean Queen. I await you underwater!"
+            },
+
+            // Claves de la Sección TIPS
+            tips_section_title: {
+                es: "Tips de Inmersión Bull Shark",
+                en: "Bull Shark Diving Tips"
+            },
+            tips_section_subtitle: {
+                es: "Mini Guía para Bucear sin Dejar Huella",
+                en: "Mini Guide to Diving Without a Trace"
+            },
+            tip_1_title: {
+                es: "Check Up del Equipo",
+                en: "Gear Check Up"
+            },
+            tip_1_desc: {
+                es: "¡Checa tu equipo! No queremos que nada falle una vez abajo del agua.",
+                en: "Check your gear! We don't want anything to fail once underwater."
+            },
+            tip_2_title: {
+                es: "Seguridad y Mimetismo (Crucial!)",
+                en: "Safety and Mimicry (Crucial!)"
+            },
+            tip_2_desc: {
+                es: "Por seguridad, es una práctica estándar utilizar equipo de color neutro, preferiblemente negro.",
+                en: "For safety, it's standard practice to use neutral-colored gear, preferably black."
+            },
+            tip_3_title: {
+                es: "¡Respeta tu Entorno!",
+                en: "Respect Your Environment!"
+            },
+            tip_3_desc: {
+                es: "Una vez abajo, ¡observa sin tocar! Somos invitados en su mundo.",
+                en: "Once underwater, observe without touching! We are guests in their world."
+            },
+            tip_4_title: {
+                es: "Toma Tú Tiempo",
+                en: "Take Your Time"
+            },
+            tip_4_desc: {
+                es: "Baja al agua con calma. Mejor admirar la belleza natural con tranquilidad.",
+                en: "Descend calmly. Better to admire natural beauty with tranquility."
+            },
+            tip_5_title: {
+                es: "¡Recuerdos Mentales!",
+                en: "Mental Souvenirs!"
+            },
+            tip_5_desc: {
+                es: "Los únicos recuerdos que nos podemos llevar, son buenas memorias y grandes fotos.",
+                en: "The only souvenirs we can take are good memories and great photos."
+            },
+            tip_6_title: {
+                es: "Antes de Subir, Parada de Seguridad",
+                en: "Before Ascending, Safety Stop"
+            },
+            tip_6_desc: {
+                es: "Ascender en la línea despacio y sujetar la línea para hacer la parada de seguridad 5 metros por 3 minutos.",
+                en: "Ascend slowly on the line and hold the line to perform the 5-meter, 3-minute safety stop."
+            },
+            tips_footer: {
+                es: "¡Listos para la Aventura!",
+                en: "Ready for the Adventure!"
+            },
+            
+            // Claves de la Sección MÁS TOURS
+            more_tours_title: {
+                es: "Más Aventuras Marinas (Próximamente)",
+                en: "More Marine Adventures (Coming Soon)"
+            },
+            more_tours_desc: {
+                es: "El océano es vasto. Próximamente, explora más maravillas del Caribe Mexicano con nosotros.",
+                en: "The ocean is vast. Explore more wonders of the Mexican Caribbean with us soon."
+            },
+            more_tours_card_1_title: {
+                es: "Buceo en Cenotes",
+                en: "Cenote Diving"
+            },
+            more_tours_card_1_desc: {
+                es: "Explora el sistema de cuevas subterráneas de la Riviera Maya. Una experiencia única.",
+                en: "Explore the underground cave system of the Riviera Maya. A unique experience."
+            },
+            more_tours_card_2_title: {
+                es: "Cozumel Arrecifes",
+                en: "Cozumel Reefs"
+            },
+            more_tours_card_2_desc: {
+                es: "Inmersiones a la deriva en una de las mejores paredes de arrecifes del mundo.",
+                en: "Drift dives on one of the best reef walls in the world."
+            },
+            more_tours_card_3_title: {
+                es: "Curso de Buceo PADI",
+                en: "PADI Dive Course"
+            },
+            more_tours_card_3_desc: {
+                es: "Obtén tu certificación Open Water o Avanzada con instructores expertos.",
+                en: "Get your Open Water or Advanced certification with expert instructors."
+            },
+            more_tours_card_4_title: {
+                es: "Buceo Nocturno",
+                en: "Night Dive"
+            },
+            more_tours_card_4_desc: {
+                es: "Descubre la vida marina nocturna, el arrecife cobra vida en la oscuridad.",
+                en: "Discover nocturnal marine life; the reef comes alive in the dark."
+            },
+            
+            // Claves de la Sección RESERVA/CONTACTO
+            book_title: {
+                es: "Reserva Tu Inmersión con el Tiburón Toro",
+                en: "Book Your Bull Shark Dive"
+            },
+            book_desc: {
+                es: "Garantiza tu lugar en la temporada 2025-2026. Reserva rápida y segura a través de WhatsApp.",
+                en: "Guarantee your spot for the 2025-2026 season. Fast and secure booking via WhatsApp."
+            },
+            book_btn: {
+                es: "Enviar Mensaje de Reserva por WhatsApp",
+                en: "Send Booking Message via WhatsApp"
+            },
+            whatsapp_message: {
+                es: "Hola Lydia, me gustaría reservar el tour de Tiburón Toro para [FECHA] con [NÚMERO] personas. Mi certificación es [CERTIFICACIÓN].",
+                en: "Hello Lydia, I would like to book the Bull Shark tour for [DATE] with [NUMBER] people. My certification is [CERTIFICATION]."
+            },
+            
+            // Claves del FOOTER
+            footer_links: {
+                es: "Enlaces Rápidos",
+                en: "Quick Links"
+            },
+            footer_contact_info: {
+                es: "Información de Contacto",
+                en: "Contact Info"
+            },
+            footer_follow: {
+                es: "Síguenos en Redes",
+                en: "Follow Us"
+            },
+            footer_copy: {
+                es: "Bull Shark Playa Ecotours. Todos los derechos reservados.",
+                en: "Bull Shark Playa Ecotours. All rights reserved."
+            },
         };
 
-        let currentLang = 'es';
-        
-        function updateLanguage(lang) {
+        let currentLang = 'es'; // Idioma por defecto
+
+        /**
+         * Función principal para aplicar las traducciones a la página.
+         * @param {string} lang - El idioma a traducir ('es' o 'en').
+         */
+        function translatePage(lang) {
             document.querySelectorAll('[data-i18n]').forEach(element => {
                 const key = element.getAttribute('data-i18n');
-                if (translations[lang] && translations[lang][key]) {
-                    // Usar innerHTML para que <br> y <strong> sigan funcionando (y ahora <i> para cursivas)
-                    element.innerHTML = translations[lang][key];
+                if (translations[key] && translations[key][lang]) {
+                    // Reemplazar el contenido de texto (permite HTML como <br>)
+                    element.innerHTML = translations[key][lang];
                 }
             });
-            document.getElementById('lang-display').textContent = lang.toUpperCase();
-            document.getElementById('lang-display-mobile').textContent = lang.toUpperCase();
-            // Actualizar el atributo lang del tag <html>
-            document.documentElement.lang = lang;
-        }
-
-        function toggleLanguage() {
-            currentLang = currentLang === 'es' ? 'en' : 'es';
-            updateLanguage(currentLang);
-        }
-
-        // Inicializar el idioma al cargar
-        document.addEventListener('DOMContentLoaded', () => {
-            updateLanguage(currentLang);
-        });
-
-        // --- Toggle del Menú Móvil ---
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        }
-
-        // --- Efecto de cabecera pegajosa (Sticky Header) ---
-        window.onscroll = function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-md');
-            } else {
-                navbar.classList.remove('shadow-md');
+            
+            // Actualizar los displays de idioma en la navegación
+            const langDisplayDesktop = document.getElementById('lang-display');
+            const langDisplayMobile = document.getElementById('lang-display-mobile');
+            
+            if (langDisplayDesktop) {
+                langDisplayDesktop.textContent = lang.toUpperCase();
             }
+            if (langDisplayMobile) {
+                langDisplayMobile.textContent = lang.toUpperCase();
+            }
+            
+            // Cambiar el atributo lang de la etiqueta <html> para SEO y accesibilidad
+            document.documentElement.setAttribute('lang', lang);
+            
+            // Actualizar el meta description y keywords
+            const metaDesc = document.querySelector('meta[name="description"]');
+            const metaKeywords = document.querySelector('meta[name="keywords"]');
+            
+            if (lang === 'en') {
+                metaDesc.setAttribute('content', 'Experience diving with the bull shark in Playa del Carmen. Safe tours, guided by marine life experts. Book your adventure today.');
+                metaKeywords.setAttribute('content', 'bull shark, Playa del Carmen, diving, dive tours, marine adventure, bull shark dive, riviera maya diving, 2025, 2026');
+            } else {
+                // Volver a ES
+                metaDesc.setAttribute('content', 'Vive la experiencia de bucear con el tiburón toro en Playa del Carmen. Tours seguros, guiados por expertos en vida marina. Reserva tu aventura hoy.');
+                metaKeywords.setAttribute('content', 'tiburón toro, Playa del Carmen, buceo, tours de buceo, aventura marina, bull shark dive, riviera maya diving, 2025, 2026');
+            }
+            
+            // Actualizar el mensaje de WhatsApp CTA
+            const whatsappLink = document.querySelector('.whatsapp-cta');
+            if (whatsappLink) {
+                let message = translations.whatsapp_message[lang];
+                message = encodeURIComponent(message);
+                whatsappLink.href = `https://wa.me/529841857943?text=${message}`; // Asegúrate de que el número sea correcto
+            }
+            
+            // Guardar la preferencia de idioma
+            localStorage.setItem('bullSharkLang', lang);
+            currentLang = lang;
+        }
+
+        /**
+         * Alterna el idioma entre español (es) e inglés (en).
+         */
+        window.toggleLanguage = function() {
+            const newLang = (currentLang === 'es') ? 'en' : 'es';
+            translatePage(newLang);
+        }
+
+        // Función que se ejecuta al cargar la página
+        window.onload = function() {
+            // 1. Cargar la preferencia de idioma del usuario (si existe)
+            const storedLang = localStorage.getItem('bullSharkLang');
+            if (storedLang && (storedLang === 'es' || storedLang === 'en')) {
+                currentLang = storedLang;
+            } else {
+                // 2. Si no hay preferencia, usar el idioma de la etiqueta <html> por defecto
+                const htmlLang = document.documentElement.getAttribute('lang') || 'es';
+                currentLang = htmlLang === 'en' ? 'en' : 'es';
+            }
+            
+            // 3. Aplicar las traducciones al cargar la página
+            translatePage(currentLang);
+            
+            // Configuración del botón del menú móvil
+            const mobileMenu = document.getElementById('mobile-menu');
+            window.toggleMobileMenu = function() {
+                mobileMenu.classList.toggle('hidden');
+            }
+            
+            // Ocultar el menú móvil al hacer click en un enlace (para mejor UX)
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+            
+            // Lógica para cerrar menú móvil al cambiar de idioma
+            document.querySelector('#navbar button[onclick="toggleLanguage()"]').addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
         };
 
-
+        // Función para el desplazamiento de la navegación (para evitar que la nav fija tape el ancla)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    const navbarHeight = 80; // Altura de la nav fija
+                    const targetPosition = targetElement.offsetTop - navbarHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
 </body>
-
 </html>
-
-
-
