@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Bull shark tours</title>
+    <title>LYLI DEEP EXPLORE | OCEAN & NATURE ADVENTURES</title>
     <meta name="description" content="Vive la experiencia de bucear con el tiburón toro en Playa del Carmen. Tours seguros, guiados por expertos en vida marina. Reserva tu aventura hoy.">
     <meta name="keywords" content="tiburón toro, Playa del Carmen, buceo, tours de buceo, aventura marina, bull shark dive, riviera maya diving, 2025, 2026">
-    <meta name="author" content="Bull Shark Playa Ecotours (Lydia Dive Instructor)">
+    <meta name="author" content="LYLI DEEP EXPLORE (Lydia Dive Instructor)">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,6 +64,14 @@
             background-repeat: no-repeat;
         }
 
+        /* NUEVA clase para Cozumel */
+        .cozumel-details-image {
+            background-image: url('tour-cozumel.jpg'); /* Usamos la imagen del card */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
         .tour-card-hover:hover {
             transform: translateY(-5px);
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
@@ -111,17 +119,18 @@
 </head>
 <body class="font-sans text-slate-700 bg-white antialiased">
 
+    
     <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
                     <i class="fa-solid fa-water text-oceanBlue text-2xl"></i>
-                    <span class="font-bold text-xl tracking-tight text-deepBlue">BULL SHARK <span class="font-light">PLAYA</span></span>
+                    <span class="font-bold text-xl tracking-tight text-deepBlue">LYLI DEEP <span class="font-light">EXPLORE</span></span>
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#experience" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_tour">El Tour</a>
-                    <a href="#details" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_details">Detalles</a>
+                    <a href="#cozumel-details" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_cozumel-details">Cozumel</a>
                     <a href="#gallery" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_gallery">Galería</a>
                     <a href="#about" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_about">Nosotros</a>
                     <a href="#tips" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_tips">Tips</a>
@@ -151,7 +160,7 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
             <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
                 <a href="#experience" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_tour">El Tour</a>
-                <a href="#details" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_details">Detalles</a>
+                <a href="#cozumel-details" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_cozumel-details">Cozumel</a>
                 <a href="#gallery" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_gallery">Galería</a>
                 <a href="#about" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_about">Nosotros</a>
                 <a href="#tips" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_tips">Tips</a>
@@ -200,7 +209,7 @@
                         <i class="fa-solid fa-shield-heart"></i>
                     </div>
                     <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="feat_1_title">Protocolo de Calma y Mimetismo</h3>
-                    <p class="text-slate-500" data-i18n="feat_1_desc">Uso obligatorio de equipo de *color neutro (negro)*. La inmovilidad en el fondo de arena garantiza la seguridad.</p>
+                    <p class="text-slate-500" data-i18n="feat_1_desc">Uso obligatorio de equipo de color neutro (negro). La inmovilidad en el fondo de arena garantiza la seguridad.</p>
                 </div>
                 <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white border border-transparent hover:border-slate-200 transition duration-300">
                     <div class="w-14 h-14 bg-blue-100 text-oceanBlue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
@@ -232,7 +241,7 @@
                             <i class="fa-regular fa-calendar-days text-accent mt-1 mr-4 text-xl"></i>
                             <div>
                                 <h4 class="font-bold text-lg" data-i18n="det_season_title">Fechas y Horarios</h4>
-                                <p class="text-slate-300" data-i18n="det_season_desc">*Activo del 15 de noviembre 2025 a marzo 2026* <br> Lunes y Viernes: 13:00 hrs <br> Miércoles y Jueves: 09:30 hrs. <br> Duración total: 4 hrs. aprox.</p>
+                                <p class="text-slate-300" data-i18n="det_season_desc">Activo denoviembre 2025 a marzo 2026 <br> Lunes a Domingo (Bajo reservacion) <br> Duración total: 4 hrs. aprox.</p>
                             </div>
                         </li>
                         <li class="flex items-start">
@@ -240,9 +249,9 @@
                             <div>
                                 <h4 class="font-bold text-lg" data-i18n="det_req_title">Requisitos OBLIGATORIOS</h4>
                                 <ul class="text-slate-300 space-y-1 ml-4 list-disc list-inside">
-                                    <li data-i18n="det_req_1">Certificación mínima: *Advanced Open Water Diver.*</li>
-                                    <li data-i18n="det_req_2">Último buceo realizado dentro de los *últimos 12 meses* (si no, refresher previo).</li>
-                                    <li data-i18n="det_req_3">Uso de equipo de buceo de *color negro* (por seguridad y mimetismo).</li>
+                                    <li data-i18n="det_req_1">Certificación mínima: Advanced Open Water Diver.</li>
+                                    <li data-i18n="det_req_2">Último buceo realizado dentro de los últimos 12 meses (si no, refresher previo).</li>
+                                    <li data-i18n="det_req_3">Uso de equipo de buceo de color negro (por seguridad y mimetismo).</li>
                                 </ul>
                             </div>
                         </li>
@@ -260,7 +269,7 @@
                             <span class="text-4xl font-bold text-white">$235 USD</span>
                             <span class="text-slate-400 mb-1">/ 4200 MXN</span>
                         </div>
-                        <p class="text-sm text-slate-400 mb-6 font-medium" data-i18n="price_tanks_note">El precio incluye *Dos Tanques de Buceo (Dos Inmersiones)*. <br> Fotografía es costo extra.</p>
+                        <p class="text-sm text-slate-400 mb-6 font-medium" data-i18n="price_tanks_note">El precio incluye Dos Tanques de Buceo (Dos Inmersiones). <br> Fotografía es costo extra.</p>
                         <ul class="grid grid-cols-2 gap-2 text-sm text-slate-300 mb-8">
                             <li><i class="fa-solid fa-check text-accent mr-2"></i>Todo el equipo de buceo</li>
                             <li><i class="fa-solid fa-check text-accent mr-2"></i>Guía / Instructor certificado</li>
@@ -275,6 +284,66 @@
 
                 <div class="details-image p-8 rounded-xl aspect-square lg:aspect-auto h-full min-h-[400px]">
                     </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cozumel-details" class="py-20 bg-oceanBlue text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 -mt-20 -ml-20 w-96 h-96 bg-deepBlue/20 rounded-full blur-3xl"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <div class="cozumel-details-image p-8 rounded-xl aspect-square lg:aspect-auto h-full min-h-[400px] order-2 lg:order-1">
+                </div>
+
+                <div class="order-1 lg:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="coz_details_title">Tour: Cozumel, Buceo de Arrecifes</h2>
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <i class="fa-regular fa-calendar-days text-accent mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg" data-i18n="coz_season_title">Fechas y Horarios</h4>
+                                <p class="text-slate-300" data-i18n="coz_season_desc">Disponible todo el año. <br> Monday to Sunday (By reservation only).</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-id-badge text-accent mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg" data-i18n="coz_req_title">Requisitos BÁSICOS</h4>
+                                <ul class="text-slate-300 space-y-1 ml-4 list-disc list-inside">
+                                    <li data-i18n="coz_req_1">Certificación mínima: Open Water Diver.</li>
+                                    <li data-i18n="coz_req_2">Experiencia en buceo a la deriva (Drift Diving).</li>
+                                    <li data-i18n="coz_req_3">Último buceo realizado dentro de los últimos 12 meses (si no, refresher previo).</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fa-solid fa-location-dot text-accent mt-1 mr-4 text-xl"></i>
+                            <div>
+                                <h4 class="font-bold text-lg" data-i18n="coz_meeting_title">Punto de Encuentro</h4>
+                                <p class="text-slate-300" data-i18n="coz_meeting_desc">Reunión en la Marina Calica (Playa del Carmen). Desde aquí se toma el ferry a Cozumel.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="mt-10 border-t border-slate-700 pt-8">
+                        <p class="text-sm text-slate-400 mb-2 uppercase tracking-wide" data-i18n="coz_price_label">Costo del Tour</p>
+                        <div class="flex items-end gap-2 mb-2">
+                            <span class="text-4xl font-bold text-white">$160 USD</span>
+                            <span class="text-slate-400 mb-1">/ 2700 MXN</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mb-6 font-medium" data-i18n="coz_price_tanks_note">El precio incluye Dos Tanques de Buceo (Dos Inmersiones). <br> No incluye Ferry a Cozumel ni impuesto de muelle.</p>
+                        <ul class="grid grid-cols-2 gap-2 text-sm text-slate-300 mb-8">
+                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Todo el equipo de buceo</li>
+                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Guía / Instructor certificado</li>
+                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Agua y Box Lunch</li>
+                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Nitrox (Costo extra)</li>
+                        </ul>
+                        <a href="#book" class="bg-accent hover:bg-sky-600 text-white px-8 py-3 rounded-full font-bold transition shadow-lg shadow-sky-500/30" data-i18n="cta_reserve_details">
+                            ¡Aparta tu lugar con el 50%!
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -381,39 +450,6 @@
         </div>
     </section>
 
-    <section id="about" class="py-20 bg-deepBlue text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="about_title">Tu Guía: Lydia, Dive Instructor PADI</h2>
-                <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
-                <div class="lg:col-span-1 flex justify-center">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent shadow-2xl bg-slate-700">
-                        <img src="lydia.jpg" 
-                            alt="Lydia Dive Instructor Portrait" 
-                            class="w-full h-full object-cover"
-                            onerror="this.onerror=null;this.src='https://placehold.co/320x320/0f172a/ffffff?text=LYDIA+DIVE\n+INSTRUCTOR';"
-                        >
-                    </div>
-                </div>
-
-                <div class="lg:col-span-2 space-y-6 text-slate-300">
-                    <p class="text-xl font-light leading-relaxed" data-i18n="about_intro">
-                        Soy Lydia Ramírez, PADI Dive Instructor, y mi misión es conectar a las personas con el océano de forma segura, respetuosa y con profundo conocimiento biológico.
-                    </p>
-                    <p data-i18n="about_focus">
-                        Mi enfoque en el buceo con tiburón toro está 100% centrado en la *biología marina y la observación responsable*. No promovemos el *feeding* ni el contacto. Operamos bajo un protocolo estricto de *calma y mimetismo* para que la inmersión sea una experiencia sublime y de cero impacto.
-                    </p>
-                    <p data-i18n="about_commitment" class="font-medium text-accent">
-                        Cada buceo con nosotros es una clase maestra sobre la conservación del ecosistema marino y la nobleza de la Reina del Océano. ¡Te espero bajo el agua!
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section id="tips" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -477,13 +513,46 @@
         </div>
     </section>
 
+    <section id="about" class="py-20 bg-deepBlue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="about_title">Tu Guía: Lydia, Dive Instructor PADI</h2>
+                <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
+                <div class="lg:col-span-1 flex justify-center">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent shadow-2xl bg-slate-700">
+                        <img src="lydia.jpg" 
+                            alt="Lydia Dive Instructor Portrait" 
+                            class="w-full h-full object-cover"
+                            onerror="this.onerror=null;this.src='https://placehold.co/320x320/0f172a/ffffff?text=LYDIA+DIVE\n+INSTRUCTOR';"
+                        >
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 space-y-6 text-slate-300">
+                    <p class="text-xl font-light leading-relaxed" data-i18n="about_intro">
+                        Soy Lydia Ramírez, PADI Dive Instructor, y mi misión es conectar a las personas con el océano de forma segura, respetuosa y con profundo conocimiento biológico.
+                    </p>
+                    <p data-i18n="about_focus">
+                        Mi enfoque en el buceo con tiburón toro está 100% centrado en la biología marina y la observación responsable. No promovemos el feeding ni el contacto. Operamos bajo un protocolo estricto de calma y mimetismo para que la inmersión sea una experiencia sublime y de cero impacto.
+                    </p>
+                    <p data-i18n="about_commitment" class="font-medium text-accent">
+                        Cada buceo con nosotros es una clase maestra sobre la conservación del ecosistema marino y la nobleza de la Reina del Océano. ¡Te espero bajo el agua!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="more-tours" class="py-20 bg-sand">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-deepBlue mb-4" data-i18n="more_tours_title">Más Aventuras Marinas (Próximamente)</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-deepBlue mb-4" data-i18n="more_tours_title">Más Aventuras Marinas</h2>
                 <div class="w-20 h-1 bg-oceanBlue mx-auto rounded-full"></div>
                 <p class="mt-4 text-slate-600 max-w-2xl mx-auto" data-i18n="more_tours_desc">
-                    El océano es vasto. Próximamente, explora más maravillas del Caribe Mexicano con nosotros.
+                    El océano es vasto. Explora más maravillas del Caribe Mexicano con nosotros.
                 </p>
             </div>
 
@@ -496,14 +565,14 @@
                         <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
                     </div>
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
+                <a href="#cozumel-details" class="block bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
                     <img src="tour-cozumel.jpg" alt="Arrecifes de Cozumel" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0ea5e9/0f172a?text=COZUMEL'">
                     <div class="p-6">
                         <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_2_title">Cozumel Arrecifes</h3>
                         <p class="text-slate-500 text-sm" data-i18n="more_tours_card_2_desc">Inmersiones a la deriva en una de las mejores paredes de arrecifes del mundo.</p>
-                        <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
+                        <span class="inline-block mt-4 text-oceanBlue text-sm font-bold uppercase" data-i18n="more_tours_available">¡RESERVA ACTIVA!</span>
                     </div>
-                </div>
+                </a>
                 <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
                     <img src="tour-padi.jpg" alt="Curso de Buceo PADI" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/ffffff?text=CURSO+PADI'">
                     <div class="p-6">
@@ -542,7 +611,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-slate-700 pb-8 mb-8">
                 <div>
-                    <h4 class="text-lg font-bold text-white mb-4">BULL SHARK <span class="font-light">PLAYA</span></h4>
+                    <h4 class="text-lg font-bold text-white mb-4"> LYLI DEEP <span class="font-light"> EXPLORE</span></h4>
                     <p class="text-sm">Especialistas en inmersiones de observación de Tiburón Toro en Playa del Carmen.</p>
                 </div>
                 <div>
@@ -550,6 +619,7 @@
                     <ul class="space-y-2 text-sm">
                         <li><a href="#experience" class="hover:text-accent transition" data-i18n="nav_tour">El Tour</a></li>
                         <li><a href="#details" class="hover:text-accent transition" data-i18n="nav_details">Detalles</a></li>
+                        <li><a href="#cozumel-details" class="hover:text-accent transition" data-i18n="nav_cozumel">Cozumel</a></li>
                         <li><a href="#gallery" class="hover:text-accent transition" data-i18n="nav_gallery">Galería</a></li>
                         <li><a href="#about" class="hover:text-accent transition" data-i18n="nav_about">Nosotros</a></li>
                     </ul>
@@ -572,7 +642,7 @@
                 </div>
             </div>
             <div class="text-center text-sm text-slate-500">
-                <p data-i18n="footer_copy">&copy; 2025 Bull Shark Playa Ecotours. Todos los derechos reservados.</p>
+                <p data-i18n="footer_copy">&copy; 2025 LYLI DEEP EXPLORE. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
@@ -589,6 +659,10 @@
             nav_details: {
                 es: "Detalles",
                 en: "Details"
+            },
+            nav_cozumel: { // NUEVA CLAVE
+                es: "Cozumel",
+                en: "Cozumel"
             },
             nav_gallery: {
                 es: "Galería",
@@ -651,8 +725,8 @@
                 en: "Calm and Mimicry Protocol"
             },
             feat_1_desc: {
-                es: "Uso obligatorio de equipo de *color neutro (negro)*. La inmovilidad en el fondo de arena garantiza la seguridad.",
-                en: "Mandatory use of *neutral-colored (black)* gear. Immobility on the sandy bottom ensures safety."
+                es: "Uso obligatorio de equipo de color neutro (negro). La inmovilidad en el fondo de arena garantiza la seguridad.",
+                en: "Mandatory use of neutral-colored (black) gear. Immobility on the sandy bottom ensures safety."
             },
             feat_2_title: {
                 es: "Observación Responsable",
@@ -671,7 +745,7 @@
                 en: "Connect with the wild pulse of the planet and understand the critical importance of their conservation."
             },
 
-            // Claves de la Sección DETALLES
+            // Claves de la Sección DETALLES TIBURÓN TORO
             details_title: {
                 es: "Detalles y Requisitos",
                 en: "Details & Requirements"
@@ -681,24 +755,24 @@
                 en: "Dates and Times"
             },
             det_season_desc: {
-                es: "*Activo del 15 de noviembre 2025 a marzo 2026* <br> Lunes y Viernes: 13:00 hrs <br> Miércoles y Jueves: 09:30 hrs. <br> Duración total: 4 hrs. aprox.",
-                en: "*Active from November 15, 2025, to March 2026* <br> Monday and Friday: 1:00 PM <br> Wednesday and Thursday: 9:30 AM. <br> Total duration: 4 hrs. approx."
+                es: "Activo de noviembre 2025 a marzo 2026 <br> Lunes a Domingo (Bajo reservacion). <br> Duración total: 4 hrs. aprox.",
+                en: "Active from November, 2025, to March 2026 <br> Monday to Sunday (By reservation only).<br> Total duration: 4 hrs. approx."
             },
             det_req_title: {
                 es: "Requisitos OBLIGATORIOS",
                 en: "MANDATORY Requirements"
             },
             det_req_1: {
-                es: "Certificación mínima: *Advanced Open Water Diver.*",
-                en: "Minimum certification: *Advanced Open Water Diver.*"
+                es: "Certificación mínima: Advanced Open Water Diver.",
+                en: "Minimum certification: Advanced Open Water Diver."
             },
             det_req_2: {
-                es: "Último buceo realizado dentro de los *últimos 12 meses* (si no, refresher previo).",
-                en: "Last dive completed within the *last 12 months* (if not, a prior refresher is required)."
+                es: "Último buceo realizado dentro de los últimos 12 meses (si no, refresher previo).",
+                en: "Last dive completed within the last 12 months (if not, a prior refresher is required)."
             },
             det_req_3: {
-                es: "Uso de equipo de buceo de *color negro* (por seguridad y mimetismo).",
-                en: "Use of *black-colored* diving gear (for safety and mimicry)."
+                es: "Uso de equipo de buceo de color negro (por seguridad y mimetismo).",
+                en: "Use of black-colored diving gear (for safety and mimicry)."
             },
             det_meeting_title: {
                 es: "Punto de Encuentro",
@@ -713,9 +787,56 @@
                 en: "Activity Cost"
             },
             price_tanks_note: {
-                es: "El precio incluye *Dos Tanques de Buceo (Dos Inmersiones)*. <br> Fotografía es costo extra.",
-                en: "Price includes *Two Dive Tanks (Two Dives)*. <br> Photography is an extra cost."
+                es: "El precio incluye Dos Tanques de Buceo (Dos Inmersiones). <br> Fotografía es costo extra.",
+                en: "Price includes Two Dive Tanks (Two Dives). <br> Photography is an extra cost."
             },
+
+            // CLAVES DE LA NUEVA SECCIÓN DETALLES COZUMEL
+            coz_details_title: {
+                es: "Tour: Cozumel, Buceo de Arrecifes",
+                en: "Tour: Cozumel, Reef Diving"
+            },
+            coz_season_title: {
+                es: "Fechas y Horarios",
+                en: "Dates and Times"
+            },
+            coz_season_desc: {
+                es: "Disponible todo el año. Días: Lunes a Domingo (Bajo reservacion)",
+                en: "Available all year. Days:Monday to Sunday (By reservation only)"
+            },
+            coz_req_title: {
+                es: "Requisitos BÁSICOS",
+                en: "BASIC Requirements"
+            },
+            coz_req_1: {
+                es: "Certificación mínima: Open Water Diver.",
+                en: "Minimum certification: Open Water Diver."
+            },
+            coz_req_2: {
+                es: "Experiencia en buceo a la deriva (Drift Diving).",
+                en: "Experience in Drift Diving."
+            },
+            coz_req_3: {
+                es: "Último buceo realizado dentro de los últimos 12 meses (si no, refresher previo).",
+                en: "Last dive completed within the last 12 months (if not, a prior refresher is required)."
+            },
+            coz_meeting_title: {
+                es: "Punto de Encuentro",
+                en: "Meeting Point"
+            },
+            coz_meeting_desc: {
+                es: "Reunión en la Marina Calica (Playa del Carmen). Desde aquí se toma el ferry a Cozumel.",
+                en: "Meeting at Marina Calica (Playa del Carmen). The ferry to Cozumel is taken from here."
+            },
+            coz_price_label: {
+                es: "Costo del Tour",
+                en: "Tour Cost"
+            },
+            coz_price_tanks_note: {
+                es: "El precio incluye Dos Tanques de Buceo (Dos Inmersiones). <br> No incluye Ferry a Cozumel ni impuesto de muelle.",
+                en: "Price includes Two Dive Tanks (Two Dives). <br> Does not include Ferry to Cozumel or pier tax."
+            },
+            
 
             // Claves de la Sección GALERÍA
             gallery_title: {
@@ -741,8 +862,8 @@
                 en: "I am Lydia Ramírez, PADI Dive Instructor, and my mission is to connect people with the ocean safely, respectfully, and with deep biological knowledge."
             },
             about_focus: {
-                es: "Mi enfoque en el buceo con tiburón toro está 100% centrado en la *biología marina y la observación responsable*. No promovemos el *feeding* ni el contacto. Operamos bajo un protocolo estricto de *calma y mimetismo* para que la inmersión sea una experiencia sublime y de cero impacto.",
-                en: "My focus on bull shark diving is 100% centered on *marine biology and responsible observation*. We do not promote *feeding* or contact. We operate under a strict protocol of *calmness and mimicry* for a sublime, zero-impact dive experience."
+                es: "Mi enfoque en el buceo con tiburón toro está 100% centrado en la biología marina y la observación responsable. No promovemos el feeding ni el contacto. Operamos bajo un protocolo estricto de calma y mimetismo para que la inmersión sea una experiencia sublime y de cero impacto.",
+                en: "My focus on bull shark diving is 100% centered on marine biology and responsible observation. We do not promote feeding or contact. We operate under a strict protocol of calmness and mimicry for a sublime, zero-impact dive experience."
             },
             about_commitment: {
                 es: "Cada buceo con nosotros es una clase maestra sobre la conservación del ecosistema marino y la nobleza de la Reina del Océano. ¡Te espero bajo el agua!",
@@ -813,12 +934,16 @@
             
             // Claves de la Sección MÁS TOURS
             more_tours_title: {
-                es: "Más Aventuras Marinas (Próximamente)",
-                en: "More Marine Adventures (Coming Soon)"
+                es: "Más Aventuras Marinas", // Se elimina 'Próximamente' ya que Cozumel está activo
+                en: "More Marine Adventures"
             },
             more_tours_desc: {
-                es: "El océano es vasto. Próximamente, explora más maravillas del Caribe Mexicano con nosotros.",
-                en: "The ocean is vast. Explore more wonders of the Mexican Caribbean with us soon."
+                es: "El océano es vasto. Explora más maravillas del Caribe Mexicano con nosotros.",
+                en: "The ocean is vast. Explore more wonders of the Mexican Caribbean with us."
+            },
+            more_tours_available: { // NUEVA CLAVE
+                es: "¡RESERVA ACTIVA!",
+                en: "BOOKING ACTIVE!"
             },
             more_tours_card_1_title: {
                 es: "Buceo en Cenotes",
@@ -885,8 +1010,8 @@
                 en: "Follow Us"
             },
             footer_copy: {
-                es: "Bull Shark Playa Ecotours. Todos los derechos reservados.",
-                en: "Bull Shark Playa Ecotours. All rights reserved."
+                es: "LYLI DEEP EXPLORE. Todos los derechos reservados.",
+                en: "LYLI DEEP EXPLORE. All rights reserved."
             },
         };
 
@@ -1007,7 +1132,5 @@
         });
     </script>
 </body>
+</html>   
 </html>
-
-
-
