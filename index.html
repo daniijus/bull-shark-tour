@@ -15,13 +15,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
+        // CONFIGURACIÓN DE COLORES: Aquí he mapeado tu color #1e70fc como "oceanBlue"
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
                         deepBlue: '#0f172a',
-                        oceanBlue: '#1e40af',
+                        oceanBlue: '#1e70fc', // Tu color de Adobe Color
                         accent: '#0ea5e9',
                         gold: '#d4af37',
                         sand: '#f8fafc',
@@ -72,7 +73,8 @@
         }
     </style>
 </head>
-<body class="font-sans text-slate-700 bg-white antialiased">
+<!-- LÍNEA 78: Aquí he aplicado tu color exacto #1e70fc -->
+<body class="font-sans text-slate-700 bg-[#1e70fc] antialiased">
 
     <!-- NAVIGATION -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200" id="navbar">
@@ -140,7 +142,7 @@
     </section>
 
     <!-- 2. ABOUT US (LYLI) -->
-    <section id="about" class="py-24 bg-white border-b border-slate-100">
+    <section id="about" class="py-24 bg-white border-b border-slate-100 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 <div class="relative">
@@ -170,13 +172,13 @@
     </section>
 
     <!-- 3. SERVICES -->
-    <section id="services" class="py-24 bg-sand">
+    <section id="services" class="py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <!-- DISCOVER SCUBA -->
             <div class="text-center mb-16">
-                <span data-i18n="ser-tag-init" class="text-accent font-bold uppercase tracking-widest text-sm">Experiencia Inicial</span>
-                <h2 data-i18n="ser-title-dsd" class="text-4xl font-bold text-deepBlue mt-2">Discover Scuba Diving</h2>
+                <span data-i18n="ser-tag-init" class="text-white font-bold uppercase tracking-widest text-sm bg-black/20 px-4 py-1 rounded-full">Experiencia Inicial</span>
+                <h2 data-i18n="ser-title-dsd" class="text-4xl font-bold text-white mt-2 drop-shadow-md">Discover Scuba Diving</h2>
             </div>
 
             <div class="mb-32">
@@ -210,14 +212,14 @@
 
             <!-- RECREATIONAL DIVES -->
             <div class="text-center mb-16">
-                <span data-i18n="ser-tag-exp" class="text-accent font-bold uppercase tracking-widest text-sm">Exploración</span>
-                <h2 data-i18n="ser-title-rec" class="text-4xl font-bold text-deepBlue mt-2">Buceos Recreativos</h2>
+                <span data-i18n="ser-tag-exp" class="text-white font-bold uppercase tracking-widest text-sm bg-black/20 px-4 py-1 rounded-full">Exploración</span>
+                <h2 data-i18n="ser-title-rec" class="text-4xl font-bold text-white mt-2 drop-shadow-md">Buceos Recreativos</h2>
                 <div class="flex flex-wrap justify-center gap-3 mt-8">
-                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Cozumel</span>
-                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Playa Del Carmen</span>
-                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Puerto Morelos</span>
-                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Cancún</span>
-                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Isla Mujeres</span>
+                    <span class="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg border border-white/30">Cozumel</span>
+                    <span class="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg border border-white/30">Playa Del Carmen</span>
+                    <span class="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg border border-white/30">Puerto Morelos</span>
+                    <span class="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg border border-white/30">Cancún</span>
+                    <span class="bg-white/20 backdrop-blur-md text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg border border-white/30">Isla Mujeres</span>
                 </div>
             </div>
 
@@ -284,8 +286,8 @@
 
             <!-- 4. PADI COURSES -->
             <div class="text-center mb-16">
-                <span data-i18n="ser-tag-edu" class="text-accent font-bold uppercase tracking-widest text-sm">Educación</span>
-                <h2 data-i18n="ser-title-padi" class="text-4xl font-bold text-deepBlue mt-2">Cursos de Buceo PADI</h2>
+                <span data-i18n="ser-tag-edu" class="text-white font-bold uppercase tracking-widest text-sm bg-black/20 px-4 py-1 rounded-full">Educación</span>
+                <h2 data-i18n="ser-title-padi" class="text-4xl font-bold text-white mt-2 drop-shadow-md">Cursos de Buceo PADI</h2>
             </div>
 
             <!-- OPEN WATER SECTION -->
@@ -306,17 +308,17 @@
 
                             <!-- OW PHASES -->
                             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div class="bg-sand p-6 rounded-2xl border-l-4 border-oceanBlue">
+                                <div class="bg-slate-50 p-6 rounded-2xl border-l-4 border-oceanBlue">
                                     <div class="text-oceanBlue font-bold text-2xl mb-2">1</div>
                                     <h4 data-i18n="ow-f1-t" class="font-bold text-deepBlue mb-2 text-sm">Sesión Teórica</h4>
                                     <p data-i18n="ow-f1-p" class="text-xs text-slate-500">¡Aprende sobre la teoría del buceo! Puedes hacerlo aquí en Cozumel o en casa online antes de llegar.</p>
                                 </div>
-                                <div class="bg-sand p-6 rounded-2xl border-l-4 border-oceanBlue">
+                                <div class="bg-slate-50 p-6 rounded-2xl border-l-4 border-oceanBlue">
                                     <div class="text-oceanBlue font-bold text-2xl mb-2">2</div>
                                     <h4 data-i18n="ow-f2-t" class="font-bold text-deepBlue mb-2 text-sm">Aguas Confinadas</h4>
                                     <p data-i18n="ow-f2-p" class="text-xs text-slate-500">Sesiones prácticas en un entorno seguro como Playa Tikila, un lugar increíble para aprender.</p>
                                 </div>
-                                <div class="bg-sand p-6 rounded-2xl border-l-4 border-oceanBlue">
+                                <div class="bg-slate-50 p-6 rounded-2xl border-l-4 border-oceanBlue">
                                     <div class="text-oceanBlue font-bold text-2xl mb-2">3</div>
                                     <h4 data-i18n="ow-f3-t" class="font-bold text-deepBlue mb-2 text-sm">Aguas Abiertas</h4>
                                     <p data-i18n="ow-f3-p" class="text-xs text-slate-500">Buceos reales a máx 18m. ¡Disfruta de 2 buceos de costa y 2 de barco en el Parque Marino!</p>
@@ -413,8 +415,8 @@
 
             <!-- SPECIALTIES -->
             <div class="text-center mb-12">
-                <span data-i18n="ser-tag-ref" class="text-accent font-bold uppercase tracking-widest text-sm">Refinamiento</span>
-                <h2 data-i18n="ser-title-spec" class="text-4xl font-bold text-deepBlue mt-2">Especialidades</h2>
+                <span data-i18n="ser-tag-ref" class="text-white font-bold uppercase tracking-widest text-sm bg-black/20 px-4 py-1 rounded-full">Refinamiento</span>
+                <h2 data-i18n="ser-title-spec" class="text-4xl font-bold text-white mt-2 drop-shadow-md">Especialidades</h2>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -453,7 +455,7 @@
     </section>
 
     <!-- GALLERY -->
-    <section id="gallery" class="py-24 bg-white overflow-hidden">
+    <section id="gallery" class="py-24 bg-white overflow-hidden shadow-sm">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 data-i18n="gal-title" class="text-4xl font-bold text-deepBlue mb-16 italic">Galería Kaan: Momentos Sagrados</h2>
             <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-12 no-scrollbar md:grid md:grid-cols-4 md:gap-6 md:space-x-0">
@@ -464,7 +466,6 @@
                         <video loop muted autoplay playsinline src="galeria_1.mp4" onerror="this.style.display='none'"></video>
                     </div>
                 </div>
-                <!-- Repetición de bloques de galería según el original -->
                 <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
                     <div class="media-container"><img src="galeria_2.jpg"><video loop muted autoplay playsinline src="galeria_2.mp4"></video></div>
                 </div>
@@ -501,6 +502,15 @@
                 <a href="https://www.instagram.com/lyli.ramz" target="_blank" class="text-slate-400 hover:text-accent transition transform hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
                 <a href="https://wa.me/529581874784" target="_blank" class="text-slate-400 hover:text-green-500 transition transform hover:scale-110"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
+            
+            <!-- POLÍTICAS DE RESERVA -->
+            <div class="mb-12">
+                <a href="https://drive.google.com/file/d/1m4f4OKegNKl-Ob9Uo62d4OJJq5ZhNAY5/view?usp=drivesdk" target="_blank" class="inline-flex items-center gap-2 border border-slate-500 px-6 py-2 rounded-full text-slate-300 hover:text-white hover:border-white transition text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-file-contract"></i>
+                    <span data-i18n="footer-policies">Políticas de Reserva y Cancelación</span>
+                </a>
+            </div>
+
             <p class="text-[10px] uppercase tracking-widest border-t border-white/5 pt-10">&copy; 2026 KAAN DIVE | COZUMEL - RIVIERA MAYA</p>
         </div>
     </footer>
@@ -519,7 +529,7 @@
                 "res-h3": "Curso PADI Rescue Diver", "res-p1": "\"Desafiante\" y \"recompensante\" son las palabras que mejor describen este curso. Aprenderás a mirar más allá de ti mismo para considerar la seguridad y el bienestar de otros buzos.", "res-p2": "A través de simulacros y teoría, aprenderás a identificar signos de estrés, gestionar emergencias y dominar técnicas de autorescate. Es un curso que te dará una confianza inigualable.", "res-safe-t": "La Seguridad es Primero", "res-safe-p": "Este curso es fundamental para quienes quieren cuidar de sus compañeros y estar listos ante cualquier situación inesperada.", "res-info-t": "Requisitos y Equipo", "btn-res": "Ser Rescatista",
                 "ser-tag-ref": "Refinamiento", "ser-title-spec": "Especialidades", "sp1-t": "Dive Against Debris", "sp1-p": "Sé un guardián del mar. Aprende a recolectar y reportar desechos marinos para proteger los arrecifes.", "sp2-t": "Conservación de Arrecifes", "sp2-p": "Entiende la fragilidad de los ecosistemas de coral y cómo tus acciones ayudan a su preservación global.", "sp3-t": "Dominio de la Flotabilidad", "sp3-p": "Domina el control de tu cuerpo bajo el agua. Reduce el consumo de aire y deslízate sin esfuerzo.", "sp4-t": "Care For Children", "sp4-p": "Entrenamiento especializado en primeros auxilios para atender a los más pequeños en entornos acuáticos.", "spec-footer": "¿Buscas algo específico como Buceo en Cenotes o Nitrox?", "spec-btn": "Preguntar por otras especialidades",
                 "gal-title": "Galería Kaan: Momentos Sagrados", "gal-swipe": "Desliza para ver más", "inc-u": "Incluye", "req-u": "Requisitos",
-                // Listas dinámicas
+                "footer-policies": "Políticas de Reserva y Cancelación",
                 "dsd-inc": ["Equipo de buceo completo", "Sesión de teoría y habilidades", "1 o 2 buceos en arrecife", "Fotos y videos (Costo extra)", "Supervisión directa de instructor"],
                 "dsd-req": ["Edad mínima: 10 años", "Saber nadar cómodamente", "Sin experiencia previa", "Completar cuestionario médico"],
                 "fun-inc": ["Tanques y pesas", "Guía profesional PADI", "Fotos y videos (Costo extra)", "Fruta, agua y snacks a bordo"],
@@ -543,7 +553,7 @@
                 "res-h3": "PADI Rescue Diver Course", "res-p1": "\"Challenging\" and \"rewarding\" are the words that best describe the Rescue Diver course. You will learn to look beyond yourself to consider the safety and well-being of other divers.", "res-p2": "Through rescue simulations and theory sessions, you will learn to identify signs of stress, manage diving emergencies, and master self-rescue techniques.", "res-safe-t": "Safety First", "res-safe-p": "This course is fundamental for those who want to look after their companions and be ready for any unexpected situation in the ocean.", "res-info-t": "Requirements & Gear", "btn-res": "Become a Rescuer",
                 "ser-tag-ref": "Refinement", "ser-title-spec": "Specialties", "sp1-t": "Dive Against Debris", "sp1-p": "Become a guardian of the sea. Learn to collect and report marine debris to protect the reefs.", "sp2-t": "Coral Reef Conservation", "sp2-p": "Understand the fragility of coral ecosystems and how your actions help global preservation.", "sp3-t": "Peak Performance Buoyancy", "sp3-p": "Master body control underwater. Reduce air consumption and glide effortlessly.", "sp4-t": "Care For Children", "sp4-p": "Specialized first aid training for attending to the little ones in aquatic environments.", "spec-footer": "Looking for something specific like Cenote Diving or Nitrox?", "spec-btn": "Inquire About Other Specialties",
                 "gal-title": "Kaan Gallery: Sacred Moments", "gal-swipe": "Swipe to see more", "inc-u": "Includes", "req-u": "Requirements",
-                // Lists
+                "footer-policies": "Booking and Cancellation Policies",
                 "dsd-inc": ["Full scuba gear", "Theory & skills session", "1 or 2 reef dives", "Photos/Videos (Extra cost)", "Direct supervision"],
                 "dsd-req": ["Min age: 10 years", "Swim comfortably", "No experience needed", "Medical questionnaire"],
                 "fun-inc": ["Tanks and weights", "Professional guide", "Photos/Videos (Extra cost)", "Fruit, water and snacks"],
@@ -565,7 +575,6 @@
         }
 
         function updateContent() {
-            // Textos simples
             document.querySelectorAll('[data-i18n]').forEach(el => {
                 const key = el.getAttribute('data-i18n');
                 if (translations[currentLang][key]) {
@@ -573,7 +582,6 @@
                 }
             });
 
-            // Listas dinámicas
             const listConfigs = [
                 {id: 'dsd-inc-list', key: 'dsd-inc'},
                 {id: 'dsd-req-list', key: 'dsd-req'},
@@ -595,18 +603,13 @@
                 }
             });
 
-            // Actualizar etiquetas de botón
             const opposite = currentLang === 'es' ? 'EN' : 'ES';
             document.getElementById('lang-label').innerText = opposite;
             document.getElementById('lang-label-mobile').innerText = opposite;
-            
-            // Título de la pestaña
             document.title = currentLang === 'es' ? 'KAAN DIVE | Cielo y Profundidad' : 'KAAN DIVE | Sky and Depth';
         }
 
         window.toggleMobileMenu = () => document.getElementById('mobile-menu').classList.toggle('hidden');
-        
-        // Carga inicial
         window.onload = updateContent;
     </script>
 </body>
