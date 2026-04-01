@@ -4,31 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>LYLI DEEP EXPLORE | OCEAN & NATURE ADVENTURES</title>
-    <meta name="description" content="Vive la experiencia de bucear con el tiburón toro en Playa del Carmen. Tours seguros, guiados por expertos en vida marina. Reserva tu aventura hoy.">
-    <meta name="keywords" content="tiburón toro, Playa del Carmen, buceo, tours de buceo, aventura marina, bull shark dive, riviera maya diving, 2025, 2026">
-    <meta name="author" content="LYLI DEEP EXPLORE (Lydia Dive Instructor)">
-
+    <title>KAAN DIVE | Cielo y Profundidad</title>
+    <meta name="description" content="Kaan Dive: Exploración, libertad y conexión con el océano en Cozumel.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        deepBlue: '#0f172a', // Slate 900
-                        oceanBlue: '#1e40af', // Blue 800
-                        sand: '#f8fafc',      // Slate 50
-                        accent: '#0ea5e9',    // Sky 500
+                        deepBlue: '#0f172a',
+                        oceanBlue: '#1e40af',
+                        accent: '#0ea5e9',
+                        gold: '#d4af37',
+                        sand: '#f8fafc',
                     }
                 }
             }
@@ -36,1098 +32,582 @@
     </script>
 
     <style>
-        /* Custom Utilities */
         .hero-bg {
-            /* Imagen local para el fondo de la sección Hero */
-            background-image: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.7)), url('inicio-fondo.jpeg');
+            background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.8)), url('inicio-fondo.jpeg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
-        
-        /* Detalles Image Background (detalles-req-fondo.jpg) */
-        .details-image {
-            background-image: linear-gradient(rgba(30, 64, 175, 0.4), rgba(30, 64, 175, 0.7)), url('detalles-req-fondo.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            text-align: center;
-            /* Se ha quitado el fondo del gradiente para dejar solo la imagen original */
-            background-image: url('detalles-req-fondo.jpg');
-            background-size: cover;
-            background-position: center;
-            /* Se asegura que la imagen de fondo esté centrada */
-            background-repeat: no-repeat;
+        .service-card {
+            transition: all 0.3s ease;
         }
-
-        /* NUEVA clase para Cozumel */
-        .cozumel-details-image {
-            background-image: url('tour-cozumel.jpg'); /* Usamos la imagen del card */
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-
-        .tour-card-hover:hover {
+        .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
         }
-
-        /* Hide scrollbar for horizontal gallery (better on mobile) */
-        .no-scrollbar::-webkit-scrollbar {
-            display: none;
-        }
-        .no-scrollbar {
-            -ms-overflow-style: none;  /* IE and Edge */
-            scrollbar-width: none;  /* Firefox */
-        }
-
-        /* Custom animation for Instagram link */
-        @keyframes pulse-shadow {
-            0% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(14, 165, 233, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(14, 165, 233, 0); }
-        }
-        .animate-pulse-shadow {
-            animation: pulse-shadow 2s infinite;
-        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
-        /* Contact Section Background (contacto-fondo.jpg) */
-        .contact-bg {
-            background-image: linear-gradient(rgba(30, 64, 175, 0.4), rgba(30, 64, 175, 0.7)), url('contacto-fondo.jpg');
-            background-size: cover;
-            background-position: center;
-        }
-
-        /* Gallery Card Styles */
         .gallery-item {
-            min-width: 90vw; /* En móvil, casi el 100% de la vista */
-            height: 400px;
-            scroll-snap-align: start;
+            min-width: 80vw;
+            height: 500px;
+            scroll-snap-align: center;
         }
-        /* En pantallas más grandes, el tamaño se ajusta a columnas */
         @media (min-width: 768px) {
-            .gallery-item {
-                min-width: calc(100% / 3 - 2rem); /* 3 items por fila con margen */
-            }
+            .gallery-item { min-width: calc(25% - 1.5rem); height: 400px; }
+        }
+        .media-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background-color: #f1f5f9;
+        }
+        .media-container img, .media-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
         }
     </style>
 </head>
 <body class="font-sans text-slate-700 bg-white antialiased">
 
-    
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all duration-300" id="navbar">
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <i class="fa-solid fa-water text-oceanBlue text-2xl"></i>
-                    <span class="font-bold text-xl tracking-tight text-deepBlue">LYLI DEEP <span class="font-light">EXPLORE</span></span>
+                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <img src="logo.jpeg" alt="Kaan Dive Logo" class="h-14 w-auto">
+                    <span class="font-bold text-xl tracking-tight text-deepBlue">KAAN <span class="text-oceanBlue font-light">DIVE</span></span>
                 </div>
 
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#experience" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_tour">El Tour</a>
-                    <a href="#cozumel-details" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_cozumel-details">Cozumel</a>
-                    <a href="#gallery" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_gallery">Galería</a>
-                    <a href="#about" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_about">Nosotros</a>
-                    <a href="#tips" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_tips">Tips</a>
-                    <a href="#more-tours" class="text-slate-600 hover:text-oceanBlue transition font-medium" data-i18n="nav_more">Más Tours (PRÓXIMAMENTE)</a>
+                    <a href="#about" data-i18n="nav-about" class="text-slate-600 hover:text-oceanBlue transition font-medium">Nosotros</a>
+                    <a href="#services" data-i18n="nav-services" class="text-slate-600 hover:text-oceanBlue transition font-medium">Servicios</a>
+                    <a href="#gallery" data-i18n="nav-gallery" class="text-slate-600 hover:text-oceanBlue transition font-medium">Galería</a>
                     
                     <button onclick="toggleLanguage()" class="flex items-center gap-2 border border-slate-300 px-3 py-1 rounded-full hover:bg-slate-100 transition">
                         <i class="fa-solid fa-globe text-slate-500"></i>
-                        <span id="lang-display" class="text-sm font-semibold">ES</span>
+                        <span id="lang-label" class="text-sm font-bold uppercase">EN</span>
                     </button>
 
-                    <a href="#book" class="bg-oceanBlue hover:bg-deepBlue text-white px-6 py-2 rounded-full font-medium transition shadow-lg shadow-blue-500/30" data-i18n="nav_book">
-                        Reservar Ahora
+                    <a href="https://wa.me/529581874784" target="_blank" class="bg-green-600 hover:bg-green-700 text-white px-6 py-2 rounded-full font-medium transition flex items-center gap-2 shadow-lg">
+                        <i class="fa-brands fa-whatsapp"></i> <span data-i18n="nav-book">Reservar</span>
                     </a>
                 </div>
 
                 <div class="md:hidden flex items-center gap-4">
-                    <button onclick="toggleLanguage()" class="text-slate-600 font-bold">
-                        <span id="lang-display-mobile">ES</span>
-                    </button>
-                    <button onclick="toggleMobileMenu()" class="text-slate-800 focus:outline-none">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
+                    <button onclick="toggleLanguage()" class="text-slate-600 font-bold uppercase"><span id="lang-label-mobile">EN</span></button>
+                    <button onclick="toggleMobileMenu()" class="text-slate-800"><i class="fa-solid fa-bars text-2xl"></i></button>
                 </div>
             </div>
         </div>
 
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full">
-            <div class="px-4 pt-2 pb-6 space-y-1 shadow-lg">
-                <a href="#experience" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_tour">El Tour</a>
-                <a href="#cozumel-details" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_cozumel-details">Cozumel</a>
-                <a href="#gallery" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_gallery">Galería</a>
-                <a href="#about" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_about">Nosotros</a>
-                <a href="#tips" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_tips">Tips</a>
-                <a href="#more-tours" class="block px-3 py-3 text-slate-600 font-medium border-b border-slate-50" onclick="toggleMobileMenu()" data-i18n="nav_more">Más Tours (PRÓXIMAMENTE)</a>
-                <a href="#book" class="block mt-4 text-center bg-oceanBlue text-white px-3 py-3 rounded-lg font-bold" onclick="toggleMobileMenu()" data-i18n="nav_book">Reservar Ahora</a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-1">
+                <a href="#about" data-i18n="nav-about" class="block px-3 py-4 text-slate-600 font-medium border-b" onclick="toggleMobileMenu()">Nosotros</a>
+                <a href="#services" data-i18n="nav-services" class="block px-3 py-4 text-slate-600 font-medium border-b" onclick="toggleMobileMenu()">Servicios</a>
+                <a href="#gallery" data-i18n="nav-gallery" class="block px-3 py-4 text-slate-600 font-medium border-b" onclick="toggleMobileMenu()">Galería</a>
+                <a href="https://wa.me/529581874784" data-i18n="nav-whatsapp" class="block mt-4 text-center bg-green-600 text-white py-4 rounded-lg font-bold">Reservar por WhatsApp</a>
             </div>
         </div>
     </nav>
 
-    <section class="hero-bg h-screen flex items-center justify-center relative">
-        <div class="text-center px-4 max-w-4xl mx-auto">
-            <span class="text-accent font-bold tracking-wider uppercase text-sm mb-4 block" data-i18n="hero_subtitle">Temporada 2025 - 2026, Playa del Carmen</span>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight" data-i18n="hero_title">
-                Buceo con <br> Tiburones Toro
-            </h1>
-            <p class="text-slate-200 text-lg md:text-xl mb-10 max-w-2xl mx-auto font-light" data-i18n="hero_desc">
-                Una experiencia de buceo de clase mundial. Adrenalina segura y respeto por las hembras preñadas, las reinas del océano.
+    <!-- 1. HOME -->
+    <section class="hero-bg h-screen flex items-center justify-center relative text-center">
+        <div class="px-4 max-w-4xl mx-auto">
+            <img src="logo.jpeg" alt="Kaan Dive Logo" class="h-48 md:h-60 mx-auto mb-8 drop-shadow-2xl">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-wide">KAAN DIVE</h1>
+            <p class="text-slate-100 text-xl md:text-2xl mb-12 font-light italic leading-relaxed">
+                <span data-i18n="hero-tagline">El contraste perfecto con el océano:</span><br class="hidden md:block">
+                <span data-i18n="hero-subline" class="text-accent font-semibold uppercase tracking-widest text-lg md:text-xl">Cielo arriba, profundidad abajo.</span>
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#book" class="bg-white text-deepBlue hover:bg-slate-100 px-8 py-4 rounded-full font-bold transition text-lg" data-i18n="cta_primary">
-                    Reserva tu aventura
+            <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                <a href="https://wa.me/529581874784" target="_blank" class="w-full sm:w-auto bg-green-500 hover:bg-green-600 text-white px-10 py-4 rounded-full font-bold transition text-lg flex items-center justify-center gap-3 shadow-xl">
+                    <i class="fa-brands fa-whatsapp text-2xl"></i> <span data-i18n="btn-contact">Contáctanos</span>
                 </a>
-                <a href="#details" class="border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-full font-bold transition text-lg flex items-center justify-center gap-2">
-                    <span data-i18n="cta_secondary">Detalles y Requisitos</span> <i class="fa-solid fa-shield-halved text-xs"></i>
+                <a href="https://www.instagram.com/lyli.ramz" target="_blank" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md border-2 border-white text-white px-10 py-4 rounded-full font-bold transition text-lg flex items-center justify-center gap-3">
+                    <i class="fa-brands fa-instagram text-2xl"></i> Instagram
                 </a>
             </div>
         </div>
-        <div class="absolute bottom-8 animate-bounce text-white/50">
-            <i class="fa-solid fa-chevron-down"></i>
+        <div class="absolute bottom-10 animate-bounce text-white/40">
+            <i class="fa-solid fa-chevron-down text-3xl"></i>
         </div>
     </section>
 
-    <section id="experience" class="py-20 bg-white">
+    <!-- 2. ABOUT US (LYLI) -->
+    <section id="about" class="py-24 bg-white border-b border-slate-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-deepBlue mb-4" data-i18n="intro_title">La Travesía de las Reinas del Océano</h2>
-                <div class="w-20 h-1 bg-oceanBlue mx-auto rounded-full"></div>
-                <p class="mt-4 text-slate-600 max-w-3xl mx-auto" data-i18n="intro_desc">
-                    No es una leyenda, ¡es la asombrosa realidad científica que ocurre cada invierno en nuestras costas! La Travesía de las Reinas del Océano. Entre noviembre y marzo, Playa del Carmen se convierte en el epicentro de una migración biológica monumental. No se trata de machos curiosos, ¡sino de poderosas hembras de tiburón toro (<i>Carcharhinus leucas</i>) PREÑADAS que desafían el océano! ¿La Misión? El instinto más primitivo y vital: la REPRODUCCIÓN.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
-                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white border border-transparent hover:border-slate-200 transition duration-300">
-                    <div class="w-14 h-14 bg-blue-100 text-oceanBlue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                        <i class="fa-solid fa-shield-heart"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="feat_1_title">Protocolo de Calma y Mimetismo</h3>
-                    <p class="text-slate-500" data-i18n="feat_1_desc">Uso obligatorio de equipo de color neutro (negro). La inmovilidad en el fondo de arena garantiza la seguridad.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white border border-transparent hover:border-slate-200 transition duration-300">
-                    <div class="w-14 h-14 bg-blue-100 text-oceanBlue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                        <i class="fa-solid fa-scale-balanced"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="feat_2_title">Observación Responsable</h3>
-                    <p class="text-slate-500" data-i18n="feat_2_desc">No es una actividad de alimentación ni contacto. Es un buceo de observación respetuoso y controlado.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-slate-50 hover:bg-white border border-transparent hover:border-slate-200 transition duration-300">
-                    <div class="w-14 h-14 bg-blue-100 text-oceanBlue rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
-                        <i class="fa-solid fa-earth-americas"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="feat_3_title">Superdepredadores Vitales</h3>
-                    <p class="text-slate-500" data-i18n="feat_3_desc">Conéctate con el pulso salvaje del planeta y entiende la importancia crítica de su conservación.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="details" class="py-20 bg-deepBlue text-white relative overflow-hidden">
-        <div class="absolute top-0 right-0 -mt-20 -mr-20 w-96 h-96 bg-oceanBlue/20 rounded-full blur-3xl"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="details_title">Detalles y Requisitos</h2>
-                    <ul class="space-y-6">
-                        <li class="flex items-start">
-                            <i class="fa-regular fa-calendar-days text-accent mt-1 mr-4 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-lg" data-i18n="det_season_title">Fechas y Horarios</h4>
-                                <p class="text-slate-300" data-i18n="det_season_desc">Activo denoviembre 2025 a marzo 2026 <br> Lunes a Domingo (Bajo reservacion) <br> Duración total: 4 hrs. aprox.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-id-badge text-accent mt-1 mr-4 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-lg" data-i18n="det_req_title">Requisitos OBLIGATORIOS</h4>
-                                <ul class="text-slate-300 space-y-1 ml-4 list-disc list-inside">
-                                    <li data-i18n="det_req_1">Certificación mínima: Advanced Open Water Diver.</li>
-                                    <li data-i18n="det_req_2">Último buceo realizado dentro de los últimos 12 meses (si no, refresher previo).</li>
-                                    <li data-i18n="det_req_3">Uso de equipo de buceo de color negro (por seguridad y mimetismo).</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-location-dot text-accent mt-1 mr-4 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-lg" data-i18n="det_meeting_title">Punto de Encuentro</h4>
-                                <p class="text-slate-300" data-i18n="det_meeting_desc">Reunión frente al hotel The Reef Coco Beach (Calle Flamingos, Col. Luis Donaldo Colosio).</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="mt-10 border-t border-slate-700 pt-8">
-                        <p class="text-sm text-slate-400 mb-2 uppercase tracking-wide" data-i18n="price_label">Costo de la actividad</p>
-                        <div class="flex items-end gap-2 mb-2">
-                        </div>
-                        <p class="text-sm text-slate-400 mb-6 font-medium" data-i18n="price_tanks_note">El precio incluye Dos Tanques de Buceo (Dos Inmersiones). <br> Fotografía es costo extra.</p>
-                        <ul class="grid grid-cols-2 gap-2 text-sm text-slate-300 mb-8">
-                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Todo el equipo de buceo</li>
-                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Guía / Instructor certificado</li>
-                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Brazalete SEMARNAT</li>
-                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Botella de agua y snacks</li>
-                        </ul>
-                        <a href="#book" class="bg-accent hover:bg-sky-600 text-white px-8 py-3 rounded-full font-bold transition shadow-lg shadow-sky-500/30" data-i18n="cta_reserve_details">
-                            ¡Aparta tu lugar con 2100 MXN!
-                        </a>
+                <div class="relative">
+                    <div class="aspect-square rounded-2xl overflow-hidden shadow-2xl border-8 border-sand">
+                        <img src="lydia.jpg" alt="Lydia PADI Instructor" class="w-full h-full object-cover">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-oceanBlue p-6 rounded-xl text-white shadow-xl hidden md:block">
+                        <p class="font-bold text-2xl italic">Lyli Ramírez</p>
+                        <p data-i18n="about-badge" class="text-sm opacity-90 tracking-widest uppercase">Tu Guía PADI</p>
                     </div>
                 </div>
-
-                <div class="details-image p-8 rounded-xl aspect-square lg:aspect-auto h-full min-h-[400px]">
-                    </div>
+                <div class="space-y-6">
+                    <h2 data-i18n="about-title" class="text-4xl font-bold text-deepBlue">La esencia de Kaan Dive</h2>
+                    <div class="w-20 h-1 bg-oceanBlue rounded-full"></div>
+                    <p data-i18n="about-p1" class="text-lg text-slate-600 leading-relaxed">
+                        Soy Lydia Ramírez (Lyli), instructora de buceo apasionada por la conexión sagrada entre el cielo y el mar. "Kaan" significa cielo en maya, representando esa libertad que sentimos al descender al azul.
+                    </p>
+                    <p data-i18n="about-p2" class="text-slate-600">
+                        En Kaan Dive, mi objetivo es guiarte de forma segura y consciente, permitiéndote explorar la potencia natural de los arrecifes en Cozumel y la Riviera Maya mientras conectas con tu propia paz interior bajo el agua.
+                    </p>
+                    <p data-i18n="about-quote" class="font-semibold text-oceanBlue italic border-l-4 border-accent pl-4">
+                        "En la profundidad encontramos la libertad."
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="cozumel-details" class="py-20 bg-oceanBlue text-white relative overflow-hidden">
-        <div class="absolute top-0 left-0 -mt-20 -ml-20 w-96 h-96 bg-deepBlue/20 rounded-full blur-3xl"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                
-                <div class="cozumel-details-image p-8 rounded-xl aspect-square lg:aspect-auto h-full min-h-[400px] order-2 lg:order-1">
-                </div>
-
-                <div class="order-1 lg:order-2">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6" data-i18n="coz_details_title">Tour: Cozumel, Buceo de Arrecifes</h2>
-                    <ul class="space-y-6">
-                        <li class="flex items-start">
-                            <i class="fa-regular fa-calendar-days text-accent mt-1 mr-4 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-lg" data-i18n="coz_season_title">Fechas y Horarios</h4>
-                                <p class="text-slate-300" data-i18n="coz_season_desc">Disponible todo el año. <br> Lunes a Domingo (Bajo reservacion) <br> Duración total: 4 hrs. aprox.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-id-badge text-accent mt-1 mr-4 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-lg" data-i18n="coz_req_title">Requisitos BÁSICOS</h4>
-                                <ul class="text-slate-300 space-y-1 ml-4 list-disc list-inside">
-                                    <li data-i18n="coz_req_1">Certificación mínima: Open Water Diver.</li>
-                                    <li data-i18n="coz_req_2">Experiencia en buceo a la deriva (Drift Diving).</li>
-                                    <li data-i18n="coz_req_3">Último buceo realizado dentro de los últimos 12 meses (si no, refresher previo).</li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-location-dot text-accent mt-1 mr-4 text-xl"></i>
-                            <div>
-                                <h4 class="font-bold text-lg" data-i18n="coz_meeting_title">Punto de Encuentro</h4>
-                                <p class="text-slate-300" data-i18n="coz_meeting_desc">Reunión en la Marina Calica (Playa del Carmen). Desde aquí se toma el ferry a Cozumel.</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="mt-10 border-t border-slate-700 pt-8">
-                        <p class="text-sm text-slate-400 mb-2 uppercase tracking-wide" data-i18n="coz_price_label">Costo del Tour</p>
-                        <div class="flex items-end gap-2 mb-2">
-                        </div>
-                        <p class="text-sm text-slate-400 mb-6 font-medium" data-i18n="coz_price_tanks_note">El precio incluye Dos Tanques de Buceo (Dos Inmersiones). <br> No incluye Ferry a Cozumel ni impuesto de muelle.</p>
-                        <ul class="grid grid-cols-2 gap-2 text-sm text-slate-300 mb-8">
-                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Todo el equipo de buceo</li>
-                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Guía / Instructor certificado</li>
-                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Agua y Box Lunch</li>
-                            <li><i class="fa-solid fa-check text-accent mr-2"></i>Nitrox (Costo extra)</li>
-                        </ul>
-                        <a href="#book" class="bg-accent hover:bg-sky-600 text-white px-8 py-3 rounded-full font-bold transition shadow-lg shadow-sky-500/30" data-i18n="cta_reserve_details">
-                            ¡Aparta tu lugar con 1800 MXN!
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="gallery" class="py-20 bg-sand">
+    <!-- 3. SERVICES -->
+    <section id="services" class="py-24 bg-sand">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-deepBlue mb-4" data-i18n="gallery_title">Galería: El Rostro de la Nobleza</h2>
-                <div class="w-20 h-1 bg-oceanBlue mx-auto rounded-full"></div>
-                <p class="mt-4 text-slate-600 max-w-2xl mx-auto" data-i18n="gallery_desc">Imágenes y videos de nuestras inmersiones de observación. Estos son los majestuosos encuentros que te esperan bajo las aguas de Playa del Carmen.</p>
-
-            <div class="flex overflow-x-scroll snap-x snap-mandatory space-x-8 pb-4 no-scrollbar md:grid md:grid-cols-3 md:space-x-0 md:gap-8">
-                
-                <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+1">
-                        <source src="galeria-video-1.mp4" type="video/mp4">
-                        Tu navegador no soporta el video.
-                    </video>
-                </div>
-                
-                <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+2">
-                        <source src="galeria-video-2.mp4" type="video/mp4">
-                        Tu navegador no soporta el video.
-                    </video>
-                </div>
-
-                <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+3">
-                        <source src="galeria-video-3.mp4" type="video/mp4">
-                        Tu navegador no soporta el video.
-                    </video>
-                </div>
-                
-                <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+4">
-                        <source src="galeria-video-4.mp4" type="video/mp4">
-                        Tu navegador no soporta el video.
-                    </video>
-                </div>
-                
-                <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+5">
-                        <source src="galeria-video-5.mp4" type="video/mp4">
-                        Tu navegador no soporta el video.
-                    </video>
-                </div>
-
-                <div class="gallery-item rounded-xl overflow-hidden shadow-2xl bg-black md:h-[450px]">
-                    <video class="w-full h-full object-cover" controls autoplay loop muted playsinline poster="https://placehold.co/800x600/1e293b/ffffff?text=Video+6">
-                        <source src="galeria-video-6.mp4" type="video/mp4">
-                        Tu navegador no soporta el video.
-                    </video>
-                </div>
-                <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
-                    <img src="galeria-foto-1.jpg" 
-                        alt="Perfil lateral de un tiburón toro hembra" 
-                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f172a/ffffff?text=FOTO+1:\n+galeria-foto-1';">
-                </div>
-
-                <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
-                    <img src="galeria-foto-2.jpg" 
-                        alt="Buceador observando un tiburón toro desde abajo" 
-                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/1e40af/ffffff?text=FOTO+2:\n+galeria-foto-2';">
-                </div>
-
-                <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
-                    <img src="galeria-foto-3.jpg" 
-                        alt="Guía o instructor de buceo señalando un tiburón toro" 
-                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/0ea5e9/0f172a?text=FOTO+3:\n+galeria-foto-3';">
-                </div>
-
-                <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
-                    <img src="galeria-foto-4.jpg" 
-                        alt="Perfil lateral de un tiburón toro hembra" 
-                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/0f172a/ffffff?text=FOTO+4:\n+galeria-foto-4';">
-                </div>
-
-                <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
-                    <img src="galeria-foto-5.jpg" 
-                        alt="Buceador observando un tiburón toro desde abajo" 
-                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/1e40af/ffffff?text=FOTO+5:\n+galeria-foto-5';">
-                </div>
-
-                <div class="gallery-item rounded-xl overflow-hidden shadow-xl bg-gray-200">
-                    <img src="galeria-foto-6.jpg" 
-                        alt="Guía o instructor de buceo señalando un tiburón toro" 
-                        class="w-full h-full object-cover transition duration-500 hover:scale-105"
-                        onerror="this.onerror=null;this.src='https://placehold.co/800x600/0ea5e9/0f172a?text=FOTO+6:\n+galeria-foto-6';">
-                </div>
-            </div>
-
-            <div class="text-center mt-12">
-                <a href="https://www.instagram.com/lyli.ramz" target="_blank" class="inline-flex items-center gap-3 bg-oceanBlue hover:bg-deepBlue text-white px-8 py-3 rounded-full font-bold transition text-lg animate-pulse-shadow">
-                    <i class="fa-brands fa-instagram"></i>
-                    <span data-i18n="gallery_cta">Ver más en Instagram (@lyli.ramz)</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="tips" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-deepBlue mb-4" data-i18n="tips_section_title">Tips de Inmersión Bull Shark</h2>
-                <div class="w-20 h-1 bg-oceanBlue mx-auto rounded-full"></div>
-                <p class="mt-4 text-slate-600 max-w-2xl mx-auto uppercase tracking-wider font-semibold" data-i18n="tips_section_subtitle">Mini Guía para Bucear sin Dejar Huella</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-                
-                <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
-                    <i class="fa-solid fa-fins text-accent text-3xl w-12 text-center flex-shrink-0"></i>
-                    <div class="ml-4">
-                        <h4 class="text-lg font-bold text-deepBlue" data-i18n="tip_1_title">Check Up del Equipo</h4>
-                        <p class="text-slate-600" data-i18n="tip_1_desc">¡Checa tu equipo! No queremos que nada falle una vez abajo del agua.</p>
-                    </div>
-                </div>
-                
-                <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
-                    <i class="fa-solid fa-user-shield text-accent text-3xl w-12 text-center flex-shrink-0"></i>
-                    <div class="ml-4">
-                        <h4 class="text-lg font-bold text-deepBlue" data-i18n="tip_2_title">Seguridad y Mimetismo (Crucial!)</h4>
-                        <p class="text-slate-600" data-i18n="tip_2_desc">Por seguridad, es una práctica estándar utilizar equipo de color neutro, preferiblemente negro.</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
-                    <i class="fa-solid fa-eye text-accent text-3xl w-12 text-center flex-shrink-0"></i>
-                    <div class="ml-4">
-                        <h4 class="text-lg font-bold text-deepBlue" data-i18n="tip_3_title">¡Respeta tu Entorno!</h4>
-                        <p class="text-slate-600" data-i18n="tip_3_desc">Una vez abajo, ¡observa sin tocar! Somos invitados en su mundo.</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
-                    <i class="fa-solid fa-clock text-accent text-3xl w-12 text-center flex-shrink-0"></i>
-                    <div class="ml-4">
-                        <h4 class="text-lg font-bold text-deepBlue" data-i18n="tip_4_title">Toma Tú Tiempo</h4>
-                        <p class="text-slate-600" data-i18n="tip_4_desc">Baja al agua con calma. Mejor admirar la belleza natural con tranquilidad.</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
-                    <i class="fa-solid fa-heart text-accent text-3xl w-12 text-center flex-shrink-0"></i>
-                    <div class="ml-4">
-                        <h4 class="text-lg font-bold text-deepBlue" data-i18n="tip_5_title">¡Recuerdos Mentales!</h4>
-                        <p class="text-slate-600" data-i18n="tip_5_desc">Los únicos recuerdos que nos podemos llevar, son buenas memorias y grandes fotos.</p>
-                    </div>
-                </div>
-
-                <div class="flex items-start p-6 bg-sand rounded-lg shadow-sm">
-                    <i class="fa-solid fa-arrow-up-from-water text-accent text-3xl w-12 text-center flex-shrink-0"></i>
-                    <div class="ml-4">
-                        <h4 class="text-lg font-bold text-deepBlue" data-i18n="tip_6_title">Antes de Subir, Parada de Seguridad</h4>
-                        <p class="text-slate-600" data-i18n="tip_6_desc">Ascender en la línea despacio y sujetar la línea para hacer la parada de seguridad 5 metros por 3 minutos.</p>
-                    </div>
-                </div>
-            </div>
             
-            <p class="text-center text-xl font-bold text-oceanBlue mt-12" data-i18n="tips_footer">¡Listos para la Aventura!</p>
-        </div>
-    </section>
+            <!-- DISCOVER SCUBA -->
+            <div class="text-center mb-16">
+                <span data-i18n="ser-tag-init" class="text-accent font-bold uppercase tracking-widest text-sm">Experiencia Inicial</span>
+                <h2 data-i18n="ser-title-dsd" class="text-4xl font-bold text-deepBlue mt-2">Discover Scuba Diving</h2>
+            </div>
 
-    <section id="about" class="py-20 bg-deepBlue text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-32">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+                    <div class="flex flex-col lg:flex-row">
+                        <div class="w-full lg:w-1/2 bg-slate-900 aspect-video lg:aspect-auto relative group">
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline>
+                                <source src="Discover Scuba Diving.mp4" type="video/mp4">
+                            </video>
+                            <div class="absolute inset-0 bg-black/20"></div>
+                        </div>
+                        <div class="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
+                            <h3 data-i18n="dsd-h3" class="text-3xl font-bold text-deepBlue mb-6">Tu primer respiro bajo el agua</h3>
+                            <p data-i18n="dsd-p" class="text-slate-600 leading-relaxed mb-8">
+                                Nuestro programa Discover Scuba Diving en Kaan Dive es la forma perfecta de experimentar las maravillas del mundo submarino sin necesidad de una certificación previa. Es una introducción segura, emocionante y supervisada profesionalmente.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-slate-100">
+                                <div class="space-y-3">
+                                    <h4 data-i18n="dsd-inc-title" class="font-bold text-deepBlue flex items-center gap-2"><i class="fa-solid fa-circle-check text-green-500"></i> ¿Qué incluye?</h4>
+                                    <ul id="dsd-inc-list" class="text-sm text-slate-500 space-y-2"></ul>
+                                </div>
+                                <div class="space-y-3">
+                                    <h4 data-i18n="dsd-req-title" class="font-bold text-deepBlue flex items-center gap-2"><i class="fa-solid fa-clipboard-list text-accent"></i> Requisitos</h4>
+                                    <ul id="dsd-req-list" class="text-sm text-slate-500 space-y-2"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RECREATIONAL DIVES -->
+            <div class="text-center mb-16">
+                <span data-i18n="ser-tag-exp" class="text-accent font-bold uppercase tracking-widest text-sm">Exploración</span>
+                <h2 data-i18n="ser-title-rec" class="text-4xl font-bold text-deepBlue mt-2">Buceos Recreativos</h2>
+                <div class="flex flex-wrap justify-center gap-3 mt-8">
+                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Cozumel</span>
+                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Playa Del Carmen</span>
+                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Puerto Morelos</span>
+                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Cancún</span>
+                    <span class="bg-oceanBlue text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">Isla Mujeres</span>
+                </div>
+            </div>
+
+            <!-- FUN DIVE BOAT -->
+            <div class="mb-20">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+                    <div class="flex flex-col lg:flex-row-reverse">
+                        <div class="w-full lg:w-1/2 bg-slate-900 aspect-video lg:aspect-auto relative group">
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline src="fun-dive-recreativo.mp4"></video>
+                            <div class="absolute inset-0 bg-black/20"></div>
+                        </div>
+                        <div class="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
+                            <h3 data-i18n="fun-h3" class="text-3xl font-bold text-deepBlue mb-6">Fun Dive - 2 Tanques Barco</h3>
+                            <p data-i18n="fun-p" class="text-slate-600 mb-8 leading-relaxed">
+                                Disfruta de dos inmersiones espectaculares desde embarcación, explorando los arrecifes más vibrantes de la zona. Ideal para buzos certificados que buscan aventura y biodiversidad en un entorno profesional.
+                            </p>
+                            <div class="p-6 bg-blue-50 rounded-2xl mb-8">
+                                <h4 data-i18n="fun-itin" class="font-bold text-oceanBlue mb-2 italic">Itinerario sugerido:</h4>
+                                <p class="text-sm text-slate-700"><strong data-i18n="fun-d1">Buceo 1:</strong> <span data-i18n="fun-d1p">Pared profunda (18-25m) con formaciones coralinas.</span></p>
+                                <p class="text-sm text-slate-700 mt-2"><strong data-i18n="fun-d2">Buceo 2:</strong> <span data-i18n="fun-d2p">Arrecife somero (14-18m) ideal para vida macro y tortugas.</span></p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-slate-100">
+                                <div class="space-y-3">
+                                    <h4 data-i18n="inc-u" class="font-bold text-deepBlue text-sm uppercase">Incluye</h4>
+                                    <ul id="fun-inc-list" class="text-xs text-slate-500 space-y-2"></ul>
+                                </div>
+                                <div class="space-y-3">
+                                    <h4 data-i18n="req-u" class="font-bold text-deepBlue text-sm uppercase">Requisitos</h4>
+                                    <ul id="fun-req-list" class="text-xs text-slate-500 space-y-2"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NIGHT DIVE -->
+            <div class="mb-32">
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-slate-200">
+                    <div class="flex flex-col lg:flex-row">
+                        <div class="w-full lg:w-1/2 bg-slate-900 aspect-video lg:aspect-auto relative group">
+                            <video class="w-full h-full object-cover" autoplay loop muted playsinline src="buceo-nocturno.mp4"></video>
+                            <div class="absolute inset-0 bg-black/40"></div>
+                        </div>
+                        <div class="p-8 md:p-12 lg:w-1/2 flex flex-col justify-center">
+                            <h3 data-i18n="night-h3" class="text-3xl font-bold text-deepBlue mb-6">Buceo Nocturno - 1 Tanque Costa</h3>
+                            <p data-i18n="night-p" class="text-slate-600 mb-8 leading-relaxed">
+                                Descubre el mundo submarino bajo una luz diferente. La noche revela criaturas que se esconden durante el día, como pulpos, calamares y crustáceos, junto con el fenómeno de la bioluminiscencia.
+                            </p>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8 border-t border-slate-100">
+                                <div class="space-y-3">
+                                    <h4 data-i18n="night-exp-t" class="font-bold text-deepBlue text-sm uppercase text-accent">Experiencia</h4>
+                                    <p data-i18n="night-exp-p" class="text-xs text-slate-500">Buceo de entrada por costa, tranquilo y con excelente visibilidad de vida nocturna.</p>
+                                </div>
+                                <div class="space-y-3">
+                                    <h4 data-i18n="night-extra-t" class="font-bold text-deepBlue text-sm uppercase text-accent">Extra</h4>
+                                    <p data-i18n="night-extra-p" class="text-xs text-slate-500">Lámparas incluidas. Fotos y videos disponibles (Costo extra).</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. PADI COURSES -->
+            <div class="text-center mb-16">
+                <span data-i18n="ser-tag-edu" class="text-accent font-bold uppercase tracking-widest text-sm">Educación</span>
+                <h2 data-i18n="ser-title-padi" class="text-4xl font-bold text-deepBlue mt-2">Cursos de Buceo PADI</h2>
+            </div>
+
+            <!-- OPEN WATER SECTION -->
+            <div class="mb-24 bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="p-8 md:p-16">
+                    <div class="flex flex-col lg:flex-row gap-12">
+                        <div class="lg:w-2/3">
+                            <h3 data-i18n="ow-h3" class="text-3xl font-bold text-deepBlue mb-6">¿Qué es el curso Open Water?</h3>
+                            <p data-i18n="ow-p1" class="text-slate-600 leading-relaxed mb-6">
+                                Este programa está diseñado para principiantes ansiosos por explorar el mundo submarino. Durante aproximadamente 3 días, recibirás una formación completa cubriendo técnicas esenciales, protocolos de seguridad y ecología marina.
+                            </p>
+                            <p data-i18n="ow-p2" class="text-slate-600 leading-relaxed mb-6">
+                                A través de una combinación de sesiones teóricas, prácticas en aguas confinadas y emocionantes buceos en aguas abiertas, ganarás la confianza necesaria para ser un buzo certificado.
+                            </p>
+                            <p data-i18n="ow-p3" class="text-slate-600 leading-relaxed mb-10 font-medium">
+                                Una vez certificado, tendrás las habilidades para bucear con un guía u otro buzo certificado en cualquier parte del mundo.
+                            </p>
+
+                            <!-- OW PHASES -->
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="bg-sand p-6 rounded-2xl border-l-4 border-oceanBlue">
+                                    <div class="text-oceanBlue font-bold text-2xl mb-2">1</div>
+                                    <h4 data-i18n="ow-f1-t" class="font-bold text-deepBlue mb-2 text-sm">Sesión Teórica</h4>
+                                    <p data-i18n="ow-f1-p" class="text-xs text-slate-500">¡Aprende sobre la teoría del buceo! Puedes hacerlo aquí en Cozumel o en casa online antes de llegar.</p>
+                                </div>
+                                <div class="bg-sand p-6 rounded-2xl border-l-4 border-oceanBlue">
+                                    <div class="text-oceanBlue font-bold text-2xl mb-2">2</div>
+                                    <h4 data-i18n="ow-f2-t" class="font-bold text-deepBlue mb-2 text-sm">Aguas Confinadas</h4>
+                                    <p data-i18n="ow-f2-p" class="text-xs text-slate-500">Sesiones prácticas en un entorno seguro como Playa Tikila, un lugar increíble para aprender.</p>
+                                </div>
+                                <div class="bg-sand p-6 rounded-2xl border-l-4 border-oceanBlue">
+                                    <div class="text-oceanBlue font-bold text-2xl mb-2">3</div>
+                                    <h4 data-i18n="ow-f3-t" class="font-bold text-deepBlue mb-2 text-sm">Aguas Abiertas</h4>
+                                    <p data-i18n="ow-f3-p" class="text-xs text-slate-500">Buceos reales a máx 18m. ¡Disfruta de 2 buceos de costa y 2 de barco en el Parque Marino!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 bg-slate-50 p-8 rounded-3xl border border-slate-100 h-fit">
+                            <h4 data-i18n="ow-info-t" class="font-bold text-deepBlue mb-6 flex items-center gap-2">Información Práctica</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <p data-i18n="inc-u" class="text-xs font-bold text-accent uppercase mb-3">Incluye</p>
+                                    <ul id="ow-inc-list" class="text-sm text-slate-600 space-y-2"></ul>
+                                </div>
+                                <div>
+                                    <p data-i18n="req-u" class="text-xs font-bold text-accent uppercase mb-3">Requisitos</p>
+                                    <ul id="ow-req-list" class="text-sm text-slate-600 space-y-2"></ul>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/529581874784" data-i18n="btn-join" class="block w-full text-center py-4 bg-oceanBlue text-white rounded-full font-bold mt-8 shadow-lg">Inscribirme ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ADVANCED SECTION -->
+            <div class="mb-24 bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="p-8 md:p-16">
+                    <div class="flex flex-col lg:flex-row-reverse gap-12">
+                        <div class="lg:w-2/3">
+                            <h3 data-i18n="adv-h3" class="text-3xl font-bold text-deepBlue mb-6">Conviértete en Buzo Avanzado en Cozumel</h3>
+                            <p data-i18n="adv-p1" class="text-slate-600 leading-relaxed mb-6">
+                                Lleva tu buceo a nuevas profundidades con nuestro curso Avanzado. Diseñado para buzos certificados, este curso ofrece la oportunidad perfecta para explorar sitios emocionantes.
+                            </p>
+                            <h4 data-i18n="adv-h4" class="text-xl font-bold text-deepBlue mb-4 italic">¿Qué es el curso Advanced Open Water Diver?</h4>
+                            <p data-i18n="adv-p2" class="text-slate-600 leading-relaxed mb-6">
+                                El curso Avanzado está diseñado para ganar confianza en una variedad de entornos. Durante 2-3 días, participarás en cinco emocionantes inmersiones de aventura.
+                            </p>
+                            <p data-i18n="adv-p3" class="text-slate-600 leading-relaxed mb-6">
+                                Dominarás habilidades esenciales como buceo profundo y navegación, además de elegir especialidades como buceo nocturno, barcos hundidos o fotografía.
+                            </p>
+                        </div>
+                        <div class="lg:w-1/3 bg-slate-50 p-8 rounded-3xl border border-slate-100 h-fit">
+                            <h4 data-i18n="adv-info-t" class="font-bold text-deepBlue mb-6 flex items-center gap-2">Detalles del Curso</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <p data-i18n="inc-u" class="text-xs font-bold text-accent uppercase mb-3">Incluye</p>
+                                    <ul id="adv-inc-list" class="text-sm text-slate-600 space-y-2"></ul>
+                                </div>
+                                <div>
+                                    <p data-i18n="req-u" class="text-xs font-bold text-accent uppercase mb-3">Requisitos</p>
+                                    <ul id="adv-req-list" class="text-sm text-slate-600 space-y-2"></ul>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/529581874784" data-i18n="btn-level" class="block w-full text-center py-4 bg-deepBlue text-white rounded-full font-bold mt-8 shadow-lg">Subir de Nivel</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RESCUE SECTION -->
+            <div class="mb-32 bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+                <div class="p-8 md:p-16">
+                    <div class="flex flex-col lg:flex-row gap-12">
+                        <div class="lg:w-2/3">
+                            <h3 data-i18n="res-h3" class="text-3xl font-bold text-deepBlue mb-6">Curso PADI Rescue Diver</h3>
+                            <p data-i18n="res-p1" class="text-slate-600 leading-relaxed mb-6">
+                                "Desafiante" y "recompensante" son las palabras que mejor describen este curso. Aprenderás a mirar más allá de ti mismo para considerar la seguridad y el bienestar de otros buzos.
+                            </p>
+                            <p data-i18n="res-p2" class="text-slate-600 leading-relaxed mb-6">
+                                A través de simulacros y teoría, aprenderás a identificar signos de estrés, gestionar emergencias y dominar técnicas de autorescate. Es un curso que te dará una confianza inigualable.
+                            </p>
+                            <div class="p-6 bg-red-50 rounded-2xl border border-red-100">
+                                <h4 data-i18n="res-safe-t" class="font-bold text-red-700 mb-2">La Seguridad es Primero</h4>
+                                <p data-i18n="res-safe-p" class="text-sm text-slate-600">Este curso es fundamental para quienes quieren cuidar de sus compañeros y estar listos ante cualquier situación inesperada.</p>
+                            </div>
+                        </div>
+                        <div class="lg:w-1/3 bg-slate-50 p-8 rounded-3xl border border-slate-100 h-fit">
+                            <h4 data-i18n="res-info-t" class="font-bold text-deepBlue mb-6 flex items-center gap-2">Requisitos y Equipo</h4>
+                            <div class="space-y-6">
+                                <div>
+                                    <p data-i18n="inc-u" class="text-xs font-bold text-accent uppercase mb-3">Incluye</p>
+                                    <ul id="res-inc-list" class="text-sm text-slate-600 space-y-2"></ul>
+                                </div>
+                                <div>
+                                    <p data-i18n="req-u" class="text-xs font-bold text-accent uppercase mb-3">Requisitos</p>
+                                    <ul id="res-req-list" class="text-sm text-slate-600 space-y-2"></ul>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/529581874784" data-i18n="btn-res" class="block w-full text-center py-4 bg-red-600 text-white rounded-full font-bold mt-8 shadow-lg">Ser Rescatista</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SPECIALTIES -->
             <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="about_title">Tu Guía: Lydia, Dive Instructor PADI</h2>
-                <div class="w-20 h-1 bg-accent mx-auto rounded-full"></div>
+                <span data-i18n="ser-tag-ref" class="text-accent font-bold uppercase tracking-widest text-sm">Refinamiento</span>
+                <h2 data-i18n="ser-title-spec" class="text-4xl font-bold text-deepBlue mt-2">Especialidades</h2>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-10 items-center">
-                <div class="lg:col-span-1 flex justify-center">
-                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent shadow-2xl bg-slate-700">
-                        <img src="lydia.jpg" 
-                            alt="Lydia Dive Instructor Portrait" 
-                            class="w-full h-full object-cover"
-                            onerror="this.onerror=null;this.src='https://placehold.co/320x320/0f172a/ffffff?text=LYDIA+DIVE\n+INSTRUCTOR';"
-                        >
-                    </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <!-- 1. Dive Against Debris -->
+                <div class="service-card bg-white p-6 rounded-2xl border border-slate-200 shadow-md">
+                    <div class="text-oceanBlue text-3xl mb-4"><i class="fa-solid fa-trash-can"></i></div>
+                    <h4 data-i18n="sp1-t" class="font-bold text-deepBlue mb-2">Dive Against Debris</h4>
+                    <p data-i18n="sp1-p" class="text-xs text-slate-500 leading-relaxed italic">Sé un guardián del mar. Aprende a recolectar y reportar desechos marinos para proteger los arrecifes.</p>
                 </div>
-
-                <div class="lg:col-span-2 space-y-6 text-slate-300">
-                    <p class="text-xl font-light leading-relaxed" data-i18n="about_intro">
-                        Soy Lydia Ramírez, PADI Dive Instructor, y mi misión es conectar a las personas con el océano de forma segura, respetuosa y con profundo conocimiento biológico.
-                    </p>
-                    <p data-i18n="about_focus">
-                        Mi enfoque en el buceo con tiburón toro está 100% centrado en la biología marina y la observación responsable. No promovemos el feeding ni el contacto. Operamos bajo un protocolo estricto de calma y mimetismo para que la inmersión sea una experiencia sublime y de cero impacto.
-                    </p>
-                    <p data-i18n="about_commitment" class="font-medium text-accent">
-                        Cada buceo con nosotros es una clase maestra sobre la conservación del ecosistema marino y la nobleza de la Reina del Océano. ¡Te espero bajo el agua!
-                    </p>
+                <!-- 2. AWARE Coral Reef Conservation -->
+                <div class="service-card bg-white p-6 rounded-2xl border border-slate-200 shadow-md">
+                    <div class="text-green-500 text-3xl mb-4"><i class="fa-solid fa-leaf"></i></div>
+                    <h4 data-i18n="sp2-t" class="font-bold text-deepBlue mb-2">Conservación de Arrecifes</h4>
+                    <p data-i18n="sp2-p" class="text-xs text-slate-500 leading-relaxed italic">Entiende la fragilidad de los ecosistemas de coral y cómo tus acciones ayudan a su preservación global.</p>
+                </div>
+                <!-- 3. Peak Performance Buoyancy -->
+                <div class="service-card bg-white p-6 rounded-2xl border border-slate-200 shadow-md">
+                    <div class="text-accent text-3xl mb-4"><i class="fa-solid fa-up-down"></i></div>
+                    <h4 data-i18n="sp3-t" class="font-bold text-deepBlue mb-2">Dominio de la Flotabilidad</h4>
+                    <p data-i18n="sp3-p" class="text-xs text-slate-500 leading-relaxed italic">Domina el control de tu cuerpo bajo el agua. Reduce el consumo de aire y deslízate sin esfuerzo.</p>
+                </div>
+                <!-- 4. Care For Children -->
+                <div class="service-card bg-white p-6 rounded-2xl border border-slate-200 shadow-md">
+                    <div class="text-red-400 text-3xl mb-4"><i class="fa-solid fa-child-reaching"></i></div>
+                    <h4 data-i18n="sp4-t" class="font-bold text-deepBlue mb-2">Care For Children</h4>
+                    <p data-i18n="sp4-p" class="text-xs text-slate-500 leading-relaxed italic">Entrenamiento especializado en primeros auxilios para atender a los más pequeños en entornos acuáticos.</p>
                 </div>
             </div>
+
+            <div class="bg-deepBlue rounded-3xl p-8 text-center text-white">
+                <p data-i18n="spec-footer" class="text-slate-300 mb-6">¿Buscas algo específico como Buceo en Cenotes o Nitrox?</p>
+                <a href="https://wa.me/529581874784" data-i18n="spec-btn" class="inline-block bg-accent px-10 py-3 rounded-full font-bold hover:bg-white hover:text-deepBlue transition">Preguntar por otras especialidades</a>
+            </div>
+
         </div>
     </section>
 
-    <section id="more-tours" class="py-20 bg-sand">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl md:text-4xl font-bold text-deepBlue mb-4" data-i18n="more_tours_title">Más Aventuras Marinas</h2>
-                <div class="w-20 h-1 bg-oceanBlue mx-auto rounded-full"></div>
-                <p class="mt-4 text-slate-600 max-w-2xl mx-auto" data-i18n="more_tours_desc">
-                    El océano es vasto. Explora más maravillas del Caribe Mexicano con nosotros.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
-                    <img src="tour-cenote.jpg" alt="Buceo en Cenotes en la Riviera Maya" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e40af/ffffff?text=CENOTES'">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_1_title">Buceo en Cenotes</h3>
-                        <p class="text-slate-500 text-sm" data-i18n="more_tours_card_1_desc">Explora el sistema de cuevas subterráneas de la Riviera Maya. Una experiencia única.</p>
-                        <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
+    <!-- GALLERY -->
+    <section id="gallery" class="py-24 bg-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 data-i18n="gal-title" class="text-4xl font-bold text-deepBlue mb-16 italic">Galería Kaan: Momentos Sagrados</h2>
+            <div class="flex overflow-x-auto snap-x snap-mandatory space-x-6 pb-12 no-scrollbar md:grid md:grid-cols-4 md:gap-6 md:space-x-0">
+                <!-- SPACE 1 -->
+                <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
+                    <div class="media-container">
+                        <img src="galeria_1.jpg" onerror="this.src='galeria_1.png'; this.onerror=function(){this.src='galeria_1.jpeg'; this.onerror=function(){this.style.display='none'}}">
+                        <video loop muted autoplay playsinline src="galeria_1.mp4" onerror="this.style.display='none'"></video>
                     </div>
                 </div>
-                <a href="#cozumel-details" class="block bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
-                    <img src="tour-cozumel.jpg" alt="Arrecifes de Cozumel" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0ea5e9/0f172a?text=COZUMEL'">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_2_title">Cozumel Arrecifes</h3>
-                        <p class="text-slate-500 text-sm" data-i18n="more_tours_card_2_desc">Inmersiones a la deriva en una de las mejores paredes de arrecifes del mundo.</p>
-                        <span class="inline-block mt-4 text-oceanBlue text-sm font-bold uppercase" data-i18n="more_tours_available">¡RESERVA ACTIVA!</span>
-                    </div>
-                </a>
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
-                    <img src="tour-padi.jpg" alt="Curso de Buceo PADI" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/0f172a/ffffff?text=CURSO+PADI'">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_3_title">Curso de Buceo PADI</h3>
-                        <p class="text-slate-500 text-sm" data-i18n="more_tours_card_3_desc">Obtén tu certificación Open Water o Avanzada con instructores expertos.</p>
-                        <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
-                    </div>
+                <!-- Repetición de bloques de galería según el original -->
+                <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
+                    <div class="media-container"><img src="galeria_2.jpg"><video loop muted autoplay playsinline src="galeria_2.mp4"></video></div>
                 </div>
-                <div class="bg-white rounded-xl overflow-hidden shadow-lg tour-card-hover transition duration-300">
-                    <img src="tour-nocturno.jpg" alt="Buceo Nocturno" class="w-full h-48 object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/0ea5e9?text=NOCTURNO'">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-deepBlue mb-2" data-i18n="more_tours_card_4_title">Buceo Nocturno</h3>
-                        <p class="text-slate-500 text-sm" data-i18n="more_tours_card_4_desc">Descubre la vida marina nocturna, el arrecife cobra vida en la oscuridad.</p>
-                        <span class="inline-block mt-4 text-accent text-sm font-semibold uppercase">Próximamente...</span>
-                    </div>
+                <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
+                    <div class="media-container"><img src="galeria_3.jpg"><video loop muted autoplay playsinline src="galeria_3.mp4"></video></div>
+                </div>
+                <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
+                    <div class="media-container"><img src="galeria_4.jpg"><video loop muted autoplay playsinline src="galeria_4.mp4"></video></div>
+                </div>
+                <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
+                    <div class="media-container"><img src="galeria_5.jpg"><video loop muted autoplay playsinline src="galeria_5.mp4"></video></div>
+                </div>
+                <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
+                    <div class="media-container"><img src="galeria_6.jpg"><video loop muted autoplay playsinline src="galeria_6.mp4"></video></div>
+                </div>
+                <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
+                    <div class="media-container"><img src="galeria_7.jpg"><video loop muted autoplay playsinline src="galeria_7.mp4"></video></div>
+                </div>
+                <div class="gallery-item rounded-2xl overflow-hidden shadow-lg relative group">
+                    <div class="media-container"><img src="galeria_8.jpg"><video loop muted autoplay playsinline src="galeria_8.mp4"></video></div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <section id="book" class="contact-bg py-20 bg-oceanBlue text-white">
-        <div class="max-w-4xl mx-auto text-center px-4">
-            <h2 class="text-3xl md:text-5xl font-extrabold mb-4 leading-tight" data-i18n="book_title">Reserva Tu Inmersión con el Tiburón Toro</h2>
-            <p class="text-xl text-slate-200 mb-8 max-w-2xl mx-auto" data-i18n="book_desc">
-                Garantiza tu lugar en la temporada 2025-2026. Reserva rápida y segura a través de WhatsApp.
-            </p>
-            <a href="https://wa.me/529581874784" target="_blank" class="whatsapp-cta inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-bold transition text-xl shadow-lg shadow-green-500/50">
-                <i class="fa-brands fa-whatsapp text-2xl"></i>
-                <span data-i18n="book_btn">Enviar Mensaje de Reserva por WhatsApp</span>
-            </a>
-            <p class="text-sm text-slate-400 mt-4">WhatsApp Business: +52 958 187 4784</p>
+            <p data-i18n="gal-swipe" class="text-slate-400 text-sm mt-4 md:hidden font-medium">Desliza para ver más <i class="fa-solid fa-arrow-right animate-pulse"></i></p>
         </div>
     </section>
 
-    <footer class="bg-deepBlue text-slate-300 py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 border-b border-slate-700 pb-8 mb-8">
-                <div>
-                    <h4 class="text-lg font-bold text-white mb-4"> LYLI DEEP <span class="font-light"> EXPLORE</span></h4>
-                    <p class="text-sm">Especialistas en inmersiones de observación de Tiburón Toro en Playa del Carmen.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-white mb-4" data-i18n="footer_links">Enlaces Rápidos</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#experience" class="hover:text-accent transition" data-i18n="nav_tour">El Tour</a></li>
-                        <li><a href="#details" class="hover:text-accent transition" data-i18n="nav_details">Detalles</a></li>
-                        <li><a href="#cozumel-details" class="hover:text-accent transition" data-i18n="nav_cozumel">Cozumel</a></li>
-                        <li><a href="#gallery" class="hover:text-accent transition" data-i18n="nav_gallery">Galería</a></li>
-                        <li><a href="#about" class="hover:text-accent transition" data-i18n="nav_about">Nosotros</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-white mb-4" data-i18n="footer_contact_info">Información de Contacto</h4>
-                    <ul class="space-y-2 text-sm">
-                        <li><i class="fa-solid fa-phone mr-2 text-accent"></i>+52 958 187 4784</li>
-                        <li><i class="fa-solid fa-envelope mr-2 text-accent"></i>lyramirezrodriguez@gmail.com</li>
-                        <li><i class="fa-solid fa-location-dot mr-2 text-accent"></i>Playa del Carmen, Q. Roo.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-bold text-white mb-4" data-i18n="footer_follow">Síguenos en Redes</h4>
-                    <div class="flex space-x-4 text-2xl">
-                        <a href="https://www.instagram.com/lyli.ramz" target="_blank" class="hover:text-accent transition"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/BullSharkPlayaEcotours" target="_blank" class="hover:text-accent transition"><i class="fa-brands fa-facebook"></i></a>
-                        <a href="https://wa.me/529581874784" target="_blank" class="hover:text-accent transition"><i class="fa-brands fa-whatsapp"></i></a>
-                    </div>
-                </div>
+    <!-- FOOTER -->
+    <footer class="bg-deepBlue text-slate-400 py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <img src="logo.jpeg" alt="Kaan Dive Logo" class="h-20 mx-auto mb-6 opacity-90 drop-shadow-lg">
+            <p class="font-bold text-white tracking-[0.3em] mb-4">KAAN DIVE</p>
+            <p data-i18n="hero-subline" class="text-sm italic mb-10">Cielo arriba, profundidad abajo.</p>
+            <div class="flex justify-center gap-8 text-3xl mb-12">
+                <a href="https://www.instagram.com/lyli.ramz" target="_blank" class="text-slate-400 hover:text-accent transition transform hover:scale-110"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/529581874784" target="_blank" class="text-slate-400 hover:text-green-500 transition transform hover:scale-110"><i class="fa-brands fa-whatsapp"></i></a>
             </div>
-            <div class="text-center text-sm text-slate-500">
-                <p data-i18n="footer_copy">&copy; 2025 LYLI DEEP EXPLORE. Todos los derechos reservados.</p>
-            </div>
+            <p class="text-[10px] uppercase tracking-widest border-t border-white/5 pt-10">&copy; 2026 KAAN DIVE | COZUMEL - RIVIERA MAYA</p>
         </div>
     </footer>
 
-
     <script>
-        // Objeto de traducciones (el atributo data-i18n en HTML debe coincidir con la clave)
         const translations = {
-            // Claves de la Navegación (NAV)
-            nav_tour: {
-                es: "El Tour",
-                en: "The Tour"
-            },
-            nav_details: {
-                es: "Detalles",
-                en: "Details"
-            },
-            nav_cozumel: { // NUEVA CLAVE
-                es: "Cozumel",
-                en: "Cozumel"
-            },
-            nav_gallery: {
-                es: "Galería",
-                en: "Gallery"
-            },
-            nav_about: {
-                es: "Nosotros",
-                en: "About Us"
-            },
-            nav_tips: {
-                es: "Tips",
-                en: "Tips"
-            },
-            nav_more: {
-                es: "Más Tours (PRÓXIMAMENTE)",
-                en: "More Tours (COMING SOON)"
-            },
-            nav_book: {
-                es: "Reservar Ahora",
-                en: "Book Now"
-            },
-            cta_reserve_details: {
-                es: "¡Aparta tu lugar con 2100 MXN!",
-                en: "Secure your spot with 115 USD!"
-            },
-
-            // Claves de la Sección HERO
-            hero_subtitle: {
-                es: "Temporada 2025 - 2026, Playa del Carmen",
-                en: "2025 - 2026 Season, Playa del Carmen"
-            },
-            hero_title: {
-                es: "Buceo con <br> Tiburones Toro",
-                en: "Bull Shark <br> Diving"
-            },
-            hero_desc: {
-                es: "Una experiencia de buceo de clase mundial. Adrenalina segura y respeto por las hembras preñadas, las reinas del océano.",
-                en: "A world-class diving experience. Safe adrenaline and respect for the pregnant females, the queens of the ocean."
-            },
-            cta_primary: {
-                es: "Reserva tu aventura",
-                en: "Book Your Adventure"
-            },
-            cta_secondary: {
-                es: "Detalles y Requisitos",
-                en: "Details & Requirements"
-            },
-
-            // Claves de la Sección INTRO
-            intro_title: {
-                es: "La Travesía de las Reinas del Océano",
-                en: "The Journey of the Ocean Queens"
-            },
-            intro_desc: {
-                es: "No es una leyenda, ¡es la asombrosa realidad científica que ocurre cada invierno en nuestras costas! La Travesía de las Reinas del Océano. Entre noviembre y marzo, Playa del Carmen se convierte en el epicentro de una migración biológica monumental. No se trata de machos curiosos, ¡sino de poderosas hembras de tiburón toro (<i>Carcharhinus leucas</i>) PREÑADAS que desafían el océano! ¿La Misión? El instinto más primitivo y vital: la REPRODUCCIÓN.",
-                en: "It's not a legend—it's the astonishing scientific reality that occurs every winter on our shores! The Journey of the Ocean Queens. Between November and March, Playa del Carmen becomes the epicenter of a monumental biological migration. It's not about curious males, but powerful PREGNANT Bull Shark females (<i>Carcharhinus leucas</i>) challenging the ocean! The Mission? The most primitive and vital instinct: REPRODUCTION."
-            },
-            feat_1_title: {
-                es: "Protocolo de Calma y Mimetismo",
-                en: "Calm and Mimicry Protocol"
-            },
-            feat_1_desc: {
-                es: "Uso obligatorio de equipo de color neutro (negro). La inmovilidad en el fondo de arena garantiza la seguridad.",
-                en: "Mandatory use of neutral-colored (black) gear. Immobility on the sandy bottom ensures safety."
-            },
-            feat_2_title: {
-                es: "Observación Responsable",
-                en: "Responsible Observation"
-            },
-            feat_2_desc: {
-                es: "No es una actividad de alimentación ni contacto. Es un buceo de observación respetuoso y controlado.",
-                en: "This is not a feeding or contact activity. It's a respectful and controlled observation dive."
-            },
-            feat_3_title: {
-                es: "Superdepredadores Vitales",
-                en: "Vital Apex Predators"
-            },
-            feat_3_desc: {
-                es: "Conéctate con el pulso salvaje del planeta y entiende la importancia crítica de su conservación.",
-                en: "Connect with the wild pulse of the planet and understand the critical importance of their conservation."
-            },
-
-            // Claves de la Sección DETALLES TIBURÓN TORO
-            details_title: {
-                es: "Detalles y Requisitos",
-                en: "Details & Requirements"
-            },
-            det_season_title: {
-                es: "Fechas y Horarios",
-                en: "Dates and Times"
-            },
-            det_season_desc: {
-                es: "Activo de noviembre 2025 a marzo 2026 <br> Lunes a Domingo (Bajo reservacion). <br> Duración total: 4 hrs. aprox.",
-                en: "Active from November, 2025, to March 2026 <br> Monday to Sunday (By reservation only).<br> Total duration: 4 hrs. approx."
-            },
-            det_req_title: {
-                es: "Requisitos OBLIGATORIOS",
-                en: "MANDATORY Requirements"
-            },
-            det_req_1: {
-                es: "Certificación mínima: Advanced Open Water Diver.",
-                en: "Minimum certification: Advanced Open Water Diver."
-            },
-            det_req_2: {
-                es: "Último buceo realizado dentro de los últimos 12 meses (si no, refresher previo).",
-                en: "Last dive completed within the last 12 months (if not, a prior refresher is required)."
-            },
-            det_req_3: {
-                es: "Uso de equipo de buceo de color negro (por seguridad y mimetismo).",
-                en: "Use of black-colored diving gear (for safety and mimicry)."
-            },
-            det_meeting_title: {
-                es: "Punto de Encuentro",
-                en: "Meeting Point"
-            },
-            det_meeting_desc: {
-                es: "Reunión frente al hotel The Reef Coco Beach (Calle Flamingos, Col. Luis Donaldo Colosio).",
-                en: "Meeting in front of The Reef Coco Beach hotel (Calle Flamingos, Col. Luis Donaldo Colosio)."
-            },
-            price_label: {
-                es: "Costo de la actividad",
-                en: "Activity Cost"
-            },
-            price_tanks_note: {
-                es: "El precio incluye Dos Tanques de Buceo (Dos Inmersiones). <br> Fotografía es costo extra.",
-                en: "Price includes Two Dive Tanks (Two Dives). <br> Photography is an extra cost."
-            },
-
-            // CLAVES DE LA NUEVA SECCIÓN DETALLES COZUMEL
-            coz_details_title: {
-                es: "Tour: Cozumel, Buceo de Arrecifes",
-                en: "Tour: Cozumel, Reef Diving"
-            },
-            coz_season_title: {
-                es: "Fechas y Horarios",
-                en: "Dates and Times"
-            },
-            coz_season_desc: {
-                es: "Disponible todo el año. <br> Lunes a Domingo (Bajo reservacion). <br> Duración total: 4 hrs. aprox.",
-                en: "Available all year. <br> Days: Monday to Sunday (By reservation only). <br> Total duration: 4 hrs. approx."
-            },
-            coz_req_title: {
-                es: "Requisitos BÁSICOS",
-                en: "BASIC Requirements"
-            },
-            coz_req_1: {
-                es: "Certificación mínima: Open Water Diver.",
-                en: "Minimum certification: Open Water Diver."
-            },
-            coz_req_2: {
-                es: "Experiencia en buceo a la deriva (Drift Diving).",
-                en: "Experience in Drift Diving."
-            },
-            coz_req_3: {
-                es: "Último buceo realizado dentro de los últimos 12 meses (si no, refresher previo).",
-                en: "Last dive completed within the last 12 months (if not, a prior refresher is required)."
-            },
-            coz_meeting_title: {
-                es: "Punto de Encuentro",
-                en: "Meeting Point"
-            },
-            coz_meeting_desc: {
-                es: "Reunión en la Marina Calica (Playa del Carmen). Desde aquí se toma el ferry a Cozumel.",
-                en: "Meeting at Marina Calica (Playa del Carmen). The ferry to Cozumel is taken from here."
-            },
-            coz_price_label: {
-                es: "Costo del Tour",
-                en: "Tour Cost"
-            },
-            coz_price_tanks_note: {
-                es: "El precio incluye Dos Tanques de Buceo (Dos Inmersiones). <br> No incluye Ferry a Cozumel ni impuesto de muelle.",
-                en: "Price includes Two Dive Tanks (Two Dives). <br> Does not include Ferry to Cozumel or pier tax."
-            },
-            
-
-            // Claves de la Sección GALERÍA
-            gallery_title: {
-                es: "Galería: El Rostro de la Nobleza",
-                en: "Gallery: The Face of Nobility"
-            },
-            gallery_desc: {
-                es: "Imágenes y videos de nuestras inmersiones de observación. Estos son los majestuosos encuentros que te esperan bajo las aguas de Playa del Carmen.",
-                en: "Images and videos from our observation dives. These are the majestic encounters awaiting you beneath the waters of Playa del Carmen."
-            },
-            gallery_cta: {
-                es: "Ver más en Instagram (@lyli.ramz)",
-                en: "See more on Instagram (@lyli.ramz)"
-            },
-
-            // Claves de la Sección NOSOTROS
-            about_title: {
-                es: "Tu Guía: Lydia, Dive Instructor PADI",
-                en: "Your Guide: Lydia, PADI Dive Instructor"
-            },
-            about_intro: {
-                es: "Soy Lydia Ramírez, PADI Dive Instructor, y mi misión es conectar a las personas con el océano de forma segura, respetuosa y con profundo conocimiento biológico.",
-                en: "I am Lydia Ramírez, PADI Dive Instructor, and my mission is to connect people with the ocean safely, respectfully, and with deep biological knowledge."
-            },
-            about_focus: {
-                es: "Mi enfoque en el buceo con tiburón toro está 100% centrado en la biología marina y la observación responsable. No promovemos el feeding ni el contacto. Operamos bajo un protocolo estricto de calma y mimetismo para que la inmersión sea una experiencia sublime y de cero impacto.",
-                en: "My focus on bull shark diving is 100% centered on marine biology and responsible observation. We do not promote feeding or contact. We operate under a strict protocol of calmness and mimicry for a sublime, zero-impact dive experience."
-            },
-            about_commitment: {
-                es: "Cada buceo con nosotros es una clase maestra sobre la conservación del ecosistema marino y la nobleza de la Reina del Océano. ¡Te espero bajo el agua!",
-                en: "Every dive with us is a masterclass on marine ecosystem conservation and the nobility of the Ocean Queen. I await you underwater!"
-            },
-
-            // Claves de la Sección TIPS
-            tips_section_title: {
-                es: "Tips de Inmersión Bull Shark",
-                en: "Bull Shark Diving Tips"
-            },
-            tips_section_subtitle: {
-                es: "Mini Guía para Bucear sin Dejar Huella",
-                en: "Mini Guide to Diving Without a Trace"
-            },
-            tip_1_title: {
-                es: "Check Up del Equipo",
-                en: "Gear Check Up"
-            },
-            tip_1_desc: {
-                es: "¡Checa tu equipo! No queremos que nada falle una vez abajo del agua.",
-                en: "Check your gear! We don't want anything to fail once underwater."
-            },
-            tip_2_title: {
-                es: "Seguridad y Mimetismo (Crucial!)",
-                en: "Safety and Mimicry (Crucial!)"
-            },
-            tip_2_desc: {
-                es: "Por seguridad, es una práctica estándar utilizar equipo de color neutro, preferiblemente negro.",
-                en: "For safety, it's standard practice to use neutral-colored gear, preferably black."
-            },
-            tip_3_title: {
-                es: "¡Respeta tu Entorno!",
-                en: "Respect Your Environment!"
-            },
-            tip_3_desc: {
-                es: "Una vez abajo, ¡observa sin tocar! Somos invitados en su mundo.",
-                en: "Once underwater, observe without touching! We are guests in their world."
-            },
-            tip_4_title: {
-                es: "Toma Tú Tiempo",
-                en: "Take Your Time"
-            },
-            tip_4_desc: {
-                es: "Baja al agua con calma. Mejor admirar la belleza natural con tranquilidad.",
-                en: "Descend calmly. Better to admire natural beauty with tranquility."
-            },
-            tip_5_title: {
-                es: "¡Recuerdos Mentales!",
-                en: "Mental Souvenirs!"
-            },
-            tip_5_desc: {
-                es: "Los únicos recuerdos que nos podemos llevar, son buenas memorias y grandes fotos.",
-                en: "The only souvenirs we can take are good memories and great photos."
-            },
-            tip_6_title: {
-                es: "Antes de Subir, Parada de Seguridad",
-                en: "Before Ascending, Safety Stop"
-            },
-            tip_6_desc: {
-                es: "Ascender en la línea despacio y sujetar la línea para hacer la parada de seguridad 5 metros por 3 minutos.",
-                en: "Ascend slowly on the line and hold the line to perform the 5-meter, 3-minute safety stop."
-            },
-            tips_footer: {
-                es: "¡Listos para la Aventura!",
-                en: "Ready for the Adventure!"
-            },
-            
-            // Claves de la Sección MÁS TOURS
-            more_tours_title: {
-                es: "Más Aventuras Marinas", // Se elimina 'Próximamente' ya que Cozumel está activo
-                en: "More Marine Adventures"
-            },
-            more_tours_desc: {
-                es: "El océano es vasto. Explora más maravillas del Caribe Mexicano con nosotros.",
-                en: "The ocean is vast. Explore more wonders of the Mexican Caribbean with us."
-            },
-            more_tours_available: { // NUEVA CLAVE
-                es: "¡RESERVA ACTIVA!",
-                en: "BOOKING ACTIVE!"
-            },
-            more_tours_card_1_title: {
-                es: "Buceo en Cenotes",
-                en: "Cenote Diving"
-            },
-            more_tours_card_1_desc: {
-                es: "Explora el sistema de cuevas subterráneas de la Riviera Maya. Una experiencia única.",
-                en: "Explore the underground cave system of the Riviera Maya. A unique experience."
-            },
-            more_tours_card_2_title: {
-                es: "Cozumel Arrecifes",
-                en: "Cozumel Reefs"
-            },
-            more_tours_card_2_desc: {
-                es: "Inmersiones a la deriva en una de las mejores paredes de arrecifes del mundo.",
-                en: "Drift dives on one of the best reef walls in the world."
-            },
-            more_tours_card_3_title: {
-                es: "Curso de Buceo PADI",
-                en: "PADI Dive Course"
-            },
-            more_tours_card_3_desc: {
-                es: "Obtén tu certificación Open Water o Avanzada con instructores expertos.",
-                en: "Get your Open Water or Advanced certification with expert instructors."
-            },
-            more_tours_card_4_title: {
-                es: "Buceo Nocturno",
-                en: "Night Dive"
-            },
-            more_tours_card_4_desc: {
-                es: "Descubre la vida marina nocturna, el arrecife cobra vida en la oscuridad.",
-                en: "Discover nocturnal marine life; the reef comes alive in the dark."
-            },
-            
-            // Claves de la Sección RESERVA/CONTACTO
-            book_title: {
-                es: "Reserva Tu Inmersión con el Tiburón Toro",
-                en: "Book Your Bull Shark Dive"
-            },
-            book_desc: {
-                es: "Garantiza tu lugar en la temporada 2025-2026. Reserva rápida y segura a través de WhatsApp.",
-                en: "Guarantee your spot for the 2025-2026 season. Fast and secure booking via WhatsApp."
-            },
-            book_btn: {
-                es: "Enviar Mensaje de Reserva por WhatsApp",
-                en: "Send Booking Message via WhatsApp"
-            },
-            whatsapp_message: {
-                es: "Hola Lydia, me gustaría reservar el tour de Tiburón Toro para [FECHA] con [NÚMERO] personas. Mi certificación es [CERTIFICACIÓN].",
-                en: "Hello Lydia, I would like to book the Bull Shark tour for [DATE] with [NUMBER] people. My certification is [CERTIFICATION]."
-            },
-            
-            // Claves del FOOTER
-            footer_links: {
-                es: "Enlaces Rápidos",
-                en: "Quick Links"
-            },
-            footer_contact_info: {
-                es: "Información de Contacto",
-                en: "Contact Info"
-            },
-            footer_follow: {
-                es: "Síguenos en Redes",
-                en: "Follow Us"
-            },
-            footer_copy: {
-                es: "LYLI DEEP EXPLORE. Todos los derechos reservados.",
-                en: "LYLI DEEP EXPLORE. All rights reserved."
-            },
+            es: {
+                "nav-about": "Nosotros", "nav-services": "Servicios", "nav-gallery": "Galería", "nav-book": "Reservar", "nav-whatsapp": "Reservar por WhatsApp",
+                "hero-tagline": "El contraste perfecto con el océano:", "hero-subline": "Cielo arriba, profundidad abajo.", "btn-contact": "Contáctanos",
+                "about-badge": "Tu Guía PADI", "about-title": "La esencia de Kaan Dive", "about-p1": "Soy Lydia Ramírez (Lyli), instructora de buceo apasionada por la conexión sagrada entre el cielo y el mar. 'Kaan' significa cielo en maya, representando esa libertad que sentimos al descender al azul.", "about-p2": "En Kaan Dive, mi objetivo es guiarte de forma segura y consciente, permitiéndote explorar la potencia natural de los arrecifes en Cozumel y la Riviera Maya mientras conectas con tu propia paz interior bajo el agua.", "about-quote": '"En la profundidad encontramos la libertad."',
+                "ser-tag-init": "Experiencia Inicial", "ser-title-dsd": "Discover Scuba Diving", "dsd-h3": "Tu primer respiro bajo el agua", "dsd-p": "Nuestro programa Discover Scuba Diving en Kaan Dive es la forma perfecta de experimentar las maravillas del mundo submarino sin necesidad de una certificación previa. Es una introducción segura, emocionante y supervisada profesionalmente.", "dsd-inc-title": "¿Qué incluye?", "dsd-req-title": "Requisitos",
+                "ser-tag-exp": "Exploración", "ser-title-rec": "Buceos Recreativos", "fun-h3": "Fun Dive - 2 Tanques Barco", "fun-p": "Disfruta de dos inmersiones espectaculares desde embarcación, explorando los arrecifes más vibrantes de la zona. Ideal para buzos certificados que buscan aventura y biodiversidad en un entorno profesional.", "fun-itin": "Itinerario sugerido:", "fun-d1": "Buceo 1:", "fun-d1p": "Pared profunda (18-25m) con formaciones coralinas.", "fun-d2": "Buceo 2:", "fun-d2p": "Arrecife somero (14-18m) ideal para vida macro y tortugas.",
+                "night-h3": "Buceo Nocturno - 1 Tanque Costa", "night-p": "Descubre el mundo submarino bajo una luz diferente. La noche revela criaturas que se esconden durante el día, como pulpos, calamares y crustáceos, junto con el fenómeno de la bioluminiscencia.", "night-exp-t": "Experiencia", "night-exp-p": "Buceo de entrada por costa, tranquilo y con excelente visibilidad de vida nocturna.", "night-extra-t": "Extra", "night-extra-p": "Lámparas incluidas. Fotos y videos disponibles (Costo extra).",
+                "ser-tag-edu": "Educación", "ser-title-padi": "Cursos de Buceo PADI", "ow-h3": "¿Qué es el curso Open Water?", "ow-p1": "Este programa está diseñado para principiantes ansiosos por explorar el mundo submarino. Durante aproximadamente 3 días, recibirás una formación completa cubriendo técnicas esenciales, protocolos de seguridad y ecología marina.", "ow-p2": "A través de una combinación de sesiones teóricas, prácticas en aguas confinadas y emocionantes buceos en aguas abiertas, ganarás la confianza necesaria para ser un buzo certificado.", "ow-p3": "Una vez certificado, tendrás las habilidades para bucear con un guía u otro buzo certificado en cualquier parte del mundo.", "ow-f1-t": "Sesión Teórica", "ow-f1-p": "¡Aprende sobre la teoría del buceo! Puedes hacerlo aquí en Cozumel o en casa online antes de llegar.", "ow-f2-t": "Aguas Confinadas", "ow-f2-p": "Sesiones prácticas en un entorno seguro como Playa Tikila, un lugar increíble para aprender.", "ow-f3-t": "Aguas Abiertas", "ow-f3-p": "Buceos reales a máx 18m. ¡Disfruta de 2 buceos de costa y 2 de barco en el Parque Marino!", "ow-info-t": "Información Práctica", "btn-join": "Inscribirme ahora",
+                "adv-h3": "Conviértete en Buzo Avanzado en Cozumel", "adv-p1": "Lleva tu buceo a nuevas profundidades con nuestro curso Avanzado. Diseñado para buzos certificados, este curso ofrece la oportunidad perfecta para explorar sitios emocionantes.", "adv-h4": "¿Qué es el curso Advanced Open Water Diver?", "adv-p2": "El curso Avanzado está diseñado para ganar confianza en una variedad de entornos. Durante 2-3 días, participarás en cinco emocionantes inmersiones de aventura.", "adv-p3": "Dominarás habilidades esenciales como buceo profundo y navegación, además de elegir especialidades como buceo nocturno, barcos hundidos o fotografía.", "adv-info-t": "Detalles del Curso", "btn-level": "Subir de Nivel",
+                "res-h3": "Curso PADI Rescue Diver", "res-p1": "\"Desafiante\" y \"recompensante\" son las palabras que mejor describen este curso. Aprenderás a mirar más allá de ti mismo para considerar la seguridad y el bienestar de otros buzos.", "res-p2": "A través de simulacros y teoría, aprenderás a identificar signos de estrés, gestionar emergencias y dominar técnicas de autorescate. Es un curso que te dará una confianza inigualable.", "res-safe-t": "La Seguridad es Primero", "res-safe-p": "Este curso es fundamental para quienes quieren cuidar de sus compañeros y estar listos ante cualquier situación inesperada.", "res-info-t": "Requisitos y Equipo", "btn-res": "Ser Rescatista",
+                "ser-tag-ref": "Refinamiento", "ser-title-spec": "Especialidades", "sp1-t": "Dive Against Debris", "sp1-p": "Sé un guardián del mar. Aprende a recolectar y reportar desechos marinos para proteger los arrecifes.", "sp2-t": "Conservación de Arrecifes", "sp2-p": "Entiende la fragilidad de los ecosistemas de coral y cómo tus acciones ayudan a su preservación global.", "sp3-t": "Dominio de la Flotabilidad", "sp3-p": "Domina el control de tu cuerpo bajo el agua. Reduce el consumo de aire y deslízate sin esfuerzo.", "sp4-t": "Care For Children", "sp4-p": "Entrenamiento especializado en primeros auxilios para atender a los más pequeños en entornos acuáticos.", "spec-footer": "¿Buscas algo específico como Buceo en Cenotes o Nitrox?", "spec-btn": "Preguntar por otras especialidades",
+                "gal-title": "Galería Kaan: Momentos Sagrados", "gal-swipe": "Desliza para ver más", "inc-u": "Incluye", "req-u": "Requisitos",
+                // Listas dinámicas
+                "dsd-inc": ["Equipo de buceo completo", "Sesión de teoría y habilidades", "1 o 2 buceos en arrecife", "Fotos y videos (Costo extra)", "Supervisión directa de instructor"],
+                "dsd-req": ["Edad mínima: 10 años", "Saber nadar cómodamente", "Sin experiencia previa", "Completar cuestionario médico"],
+                "fun-inc": ["Tanques y pesas", "Guía profesional PADI", "Fotos y videos (Costo extra)", "Fruta, agua y snacks a bordo"],
+                "fun-req": ["Certificación vigente", "Bitácora de buceo", "Último buceo hace menos de 1 año"],
+                "ow-inc": ["Equipo completo", "Teoría (eLearning o Presencial)", "4 inmersiones en arrecife", "Entradas a playa y Parque Marino", "Certificación PADI digital"],
+                "ow-req": ["Edad mínima: 10 años", "Autorización médica", "Saber nadar", "Ganas de aprender"],
+                "adv-inc": ["5 inmersiones de aventura", "Profunda y Navegación (Oblig.)", "Equipo completo", "Transporte y Parque Marino", "Guía experto profesional"],
+                "adv-req": ["Certificación Open Water Diver", "Edad mínima: 12 años", "Autorización médica vigente"],
+                "res-inc": ["Manual PADI Rescue Diver", "Sesiones intensas", "Escenarios reales", "Kit primeros auxilios y O2"],
+                "res-req": ["Advanced Open Water", "EFR (Primeros auxilios) vigente", "Edad mínima: 12 años"]
+            },
+            en: {
+                "nav-about": "About Us", "nav-services": "Services", "nav-gallery": "Gallery", "nav-book": "Book Now", "nav-whatsapp": "Book via WhatsApp",
+                "hero-tagline": "The perfect contrast with the ocean:", "hero-subline": "Sky above, depth below.", "btn-contact": "Contact Us",
+                "about-badge": "Your PADI Guide", "about-title": "The Essence of Kaan Dive", "about-p1": "I am Lydia Ramírez (Lyli), a diving instructor passionate about the sacred connection between the sky and the sea. 'Kaan' means sky in Mayan, representing that freedom we feel as we descend into the blue.", "about-p2": "At Kaan Dive, my goal is to guide you safely and consciously, allowing you to explore the natural power of the reefs in Cozumel and the Riviera Maya while connecting with your own inner peace underwater.", "about-quote": '"We find freedom in the depth."',
+                "ser-tag-init": "Initial Experience", "ser-title-dsd": "Discover Scuba Diving", "dsd-h3": "Your first breath underwater", "dsd-p": "Our Discover Scuba Diving program at Kaan Dive is the perfect way to experience the wonders of the underwater world without needing a prior certification. It's a safe, exciting, and professionally supervised introduction.", "dsd-inc-title": "What's included?", "dsd-req-title": "Requirements",
+                "ser-tag-exp": "Exploration", "ser-title-rec": "Recreational Dives", "fun-h3": "Fun Dive - 2 Tanks Boat", "fun-p": "Enjoy two spectacular boat dives, exploring the most vibrant reefs in the area. Ideal for certified divers looking for adventure and biodiversity in a professional environment.", "fun-itin": "Suggested itinerary:", "fun-d1": "Dive 1:", "fun-d1p": "Deep wall dive (18-25m) with stunning coral formations.", "fun-d2": "Dive 2:", "fun-d2p": "Shallow reef (14-18m) ideal for macro life and turtles.",
+                "night-h3": "Night Dive - 1 Tank Shore", "night-p": "Discover the underwater world in a different light. The night reveals creatures that hide during the day, such as octopuses, squids, and crustaceans, along with the phenomenon of bioluminescence.", "night-exp-t": "Experience", "night-exp-p": "Shore entry dive, calm and with excellent visibility of nocturnal life.", "night-extra-t": "Extra", "night-extra-p": "Dive lights included. Photos and videos available (Extra cost).",
+                "ser-tag-edu": "Education", "ser-title-padi": "PADI Scuba Courses", "ow-h3": "What is the Open Water course?", "ow-p1": "This program is designed for beginners eager to explore the underwater world. Over roughly 3 days, you'll receive thorough training covering essential diving techniques, safety protocols, and marine ecology.", "ow-p2": "Through a combination of classroom sessions, confined water practices, and exciting open water dives, you'll gain the confidence needed to become a certified diver.", "ow-p3": "Once certified, you'll have the skills and experience to dive with a guide or another certified diver anywhere in the world.", "ow-f1-t": "Theory Session", "ow-f1-p": "Learn about diving theory! You can do it here in Cozumel with your instructor or at home online before you arrive.", "ow-f2-t": "Confined Water", "ow-f2-p": "Practical sessions in a safe environment like Tikila Beach—an amazing and colorful place to learn!", "ow-f3-t": "Open Water", "ow-f3-p": "Real dives to a max depth of 18m. Enjoy 2 shore dives and 2 boat dives in the Marine Park!", "ow-info-t": "Practical Info", "btn-join": "Sign Up Now",
+                "adv-h3": "Become an Advanced Diver in Cozumel", "adv-p1": "Take your diving to new depths with our Advanced course. Designed for certified divers looking to expand their skills, this course offers the perfect opportunity to explore exciting sites.", "adv-h4": "What is the Advanced Open Water Diver course?", "adv-p2": "The Advanced course is designed for certified divers who want to gain confidence in a variety of environments. Over 2-3 days, you will participate in five exciting adventure dives.", "adv-p3": "You will master essential skills such as deep diving and navigation, plus choose from specialized dives like night diving, wreck diving, or photography.", "adv-info-t": "Course Details", "btn-level": "Level Up",
+                "res-h3": "PADI Rescue Diver Course", "res-p1": "\"Challenging\" and \"rewarding\" are the words that best describe the Rescue Diver course. You will learn to look beyond yourself to consider the safety and well-being of other divers.", "res-p2": "Through rescue simulations and theory sessions, you will learn to identify signs of stress, manage diving emergencies, and master self-rescue techniques.", "res-safe-t": "Safety First", "res-safe-p": "This course is fundamental for those who want to look after their companions and be ready for any unexpected situation in the ocean.", "res-info-t": "Requirements & Gear", "btn-res": "Become a Rescuer",
+                "ser-tag-ref": "Refinement", "ser-title-spec": "Specialties", "sp1-t": "Dive Against Debris", "sp1-p": "Become a guardian of the sea. Learn to collect and report marine debris to protect the reefs.", "sp2-t": "Coral Reef Conservation", "sp2-p": "Understand the fragility of coral ecosystems and how your actions help global preservation.", "sp3-t": "Peak Performance Buoyancy", "sp3-p": "Master body control underwater. Reduce air consumption and glide effortlessly.", "sp4-t": "Care For Children", "sp4-p": "Specialized first aid training for attending to the little ones in aquatic environments.", "spec-footer": "Looking for something specific like Cenote Diving or Nitrox?", "spec-btn": "Inquire About Other Specialties",
+                "gal-title": "Kaan Gallery: Sacred Moments", "gal-swipe": "Swipe to see more", "inc-u": "Includes", "req-u": "Requirements",
+                // Lists
+                "dsd-inc": ["Full scuba gear", "Theory & skills session", "1 or 2 reef dives", "Photos/Videos (Extra cost)", "Direct supervision"],
+                "dsd-req": ["Min age: 10 years", "Swim comfortably", "No experience needed", "Medical questionnaire"],
+                "fun-inc": ["Tanks and weights", "Professional guide", "Photos/Videos (Extra cost)", "Fruit, water and snacks"],
+                "fun-req": ["Valid certification", "Logbook", "Last dive < 1 year"],
+                "ow-inc": ["Full equipment", "Theory (eLearning/Class)", "4 reef dives", "Beach/Park fees", "Digital Certificate"],
+                "ow-req": ["Min age: 10 years", "Medical authorization", "Swim comfortably", "Willingness to learn"],
+                "adv-inc": ["5 adventure dives", "Deep & Nav (Required)", "Full gear", "Transport & Park fees", "Expert professional guide"],
+                "adv-req": ["Open Water Diver cert", "Min age: 12 years", "Medical authorization"],
+                "res-inc": ["Rescue Diver Manual", "Intense training", "Real scenarios", "First aid kit & O2"],
+                "res-req": ["Advanced Open Water", "Valid EFR", "Min age: 12 years"]
+            }
         };
 
-        let currentLang = 'es'; // Idioma por defecto
+        let currentLang = 'es';
 
-        /**
-         * Función principal para aplicar las traducciones a la página.
-         * @param {string} lang - El idioma a traducir ('es' o 'en').
-         */
-        function translatePage(lang) {
-            document.querySelectorAll('[data-i18n]').forEach(element => {
-                const key = element.getAttribute('data-i18n');
-                if (translations[key] && translations[key][lang]) {
-                    // Reemplazar el contenido de texto (permite HTML como <br>)
-                    element.innerHTML = translations[key][lang];
-                }
-            });
-            
-            // Actualizar los displays de idioma en la navegación
-            const langDisplayDesktop = document.getElementById('lang-display');
-            const langDisplayMobile = document.getElementById('lang-display-mobile');
-            
-            if (langDisplayDesktop) {
-                langDisplayDesktop.textContent = lang.toUpperCase();
-            }
-            if (langDisplayMobile) {
-                langDisplayMobile.textContent = lang.toUpperCase();
-            }
-            
-            // Cambiar el atributo lang de la etiqueta <html> para SEO y accesibilidad
-            document.documentElement.setAttribute('lang', lang);
-            
-            // Actualizar el meta description y keywords
-            const metaDesc = document.querySelector('meta[name="description"]');
-            const metaKeywords = document.querySelector('meta[name="keywords"]');
-            
-            if (lang === 'en') {
-                metaDesc.setAttribute('content', 'Experience diving with the bull shark in Playa del Carmen. Safe tours, guided by marine life experts. Book your adventure today.');
-                metaKeywords.setAttribute('content', 'bull shark, Playa del Carmen, diving, dive tours, marine adventure, bull shark dive, riviera maya diving, 2025, 2026');
-            } else {
-                // Volver a ES
-                metaDesc.setAttribute('content', 'Vive la experiencia de bucear con el tiburón toro en Playa del Carmen. Tours seguros, guiados por expertos en vida marina. Reserva tu aventura hoy.');
-                metaKeywords.setAttribute('content', 'tiburón toro, Playa del Carmen, buceo, tours de buceo, aventura marina, bull shark dive, riviera maya diving, 2025, 2026');
-            }
-            
-            // Actualizar el mensaje de WhatsApp CTA
-            const whatsappLink = document.querySelector('.whatsapp-cta');
-            if (whatsappLink) {
-                let message = translations.whatsapp_message[lang];
-                message = encodeURIComponent(message);
-                whatsappLink.href = `https://wa.me/529581874784?text=${message}`; // Asegúrate de que el número sea correcto
-            }
-            
-            // Guardar la preferencia de idioma
-            localStorage.setItem('bullSharkLang', lang);
-            currentLang = lang;
+        function toggleLanguage() {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            updateContent();
         }
 
-        /**
-         * Alterna el idioma entre español (es) e inglés (en).
-         */
-        window.toggleLanguage = function() {
-            const newLang = (currentLang === 'es') ? 'en' : 'es';
-            translatePage(newLang);
+        function updateContent() {
+            // Textos simples
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang][key]) {
+                    el.innerText = translations[currentLang][key];
+                }
+            });
+
+            // Listas dinámicas
+            const listConfigs = [
+                {id: 'dsd-inc-list', key: 'dsd-inc'},
+                {id: 'dsd-req-list', key: 'dsd-req'},
+                {id: 'fun-inc-list', key: 'fun-inc'},
+                {id: 'fun-req-list', key: 'fun-req'},
+                {id: 'ow-inc-list', key: 'ow-inc'},
+                {id: 'ow-req-list', key: 'ow-req'},
+                {id: 'adv-inc-list', key: 'adv-inc'},
+                {id: 'adv-req-list', key: 'adv-req'},
+                {id: 'res-inc-list', key: 'res-inc'},
+                {id: 'res-req-list', key: 'res-req'}
+            ];
+
+            listConfigs.forEach(cfg => {
+                const list = document.getElementById(cfg.id);
+                if (list) {
+                    list.innerHTML = translations[currentLang][cfg.key]
+                        .map(item => `<li>• ${item}</li>`).join('');
+                }
+            });
+
+            // Actualizar etiquetas de botón
+            const opposite = currentLang === 'es' ? 'EN' : 'ES';
+            document.getElementById('lang-label').innerText = opposite;
+            document.getElementById('lang-label-mobile').innerText = opposite;
+            
+            // Título de la pestaña
+            document.title = currentLang === 'es' ? 'KAAN DIVE | Cielo y Profundidad' : 'KAAN DIVE | Sky and Depth';
         }
 
-        // Función que se ejecuta al cargar la página
-        window.onload = function() {
-            // 1. Cargar la preferencia de idioma del usuario (si existe)
-            const storedLang = localStorage.getItem('bullSharkLang');
-            if (storedLang && (storedLang === 'es' || storedLang === 'en')) {
-                currentLang = storedLang;
-            } else {
-                // 2. Si no hay preferencia, usar el idioma de la etiqueta <html> por defecto
-                const htmlLang = document.documentElement.getAttribute('lang') || 'es';
-                currentLang = htmlLang === 'en' ? 'en' : 'es';
-            }
-            
-            // 3. Aplicar las traducciones al cargar la página
-            translatePage(currentLang);
-            
-            // Configuración del botón del menú móvil
-            const mobileMenu = document.getElementById('mobile-menu');
-            window.toggleMobileMenu = function() {
-                mobileMenu.classList.toggle('hidden');
-            }
-            
-            // Ocultar el menú móvil al hacer click en un enlace (para mejor UX)
-            document.querySelectorAll('#mobile-menu a').forEach(link => {
-                link.addEventListener('click', () => {
-                    mobileMenu.classList.add('hidden');
-                });
-            });
-            
-            // Lógica para cerrar menú móvil al cambiar de idioma
-            document.querySelector('#navbar button[onclick="toggleLanguage()"]').addEventListener('click', () => {
-                if (!mobileMenu.classList.contains('hidden')) {
-                    mobileMenu.classList.add('hidden');
-                }
-            });
-        };
-
-        // Función para el desplazamiento de la navegación (para evitar que la nav fija tape el ancla)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    const navbarHeight = 80; // Altura de la nav fija
-                    const targetPosition = targetElement.offsetTop - navbarHeight;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        window.toggleMobileMenu = () => document.getElementById('mobile-menu').classList.toggle('hidden');
+        
+        // Carga inicial
+        window.onload = updateContent;
     </script>
 </body>
-    </html>
 </html>
-
